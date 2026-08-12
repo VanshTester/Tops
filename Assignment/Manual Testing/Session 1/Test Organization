@@ -1,0 +1,94 @@
+Software Testing Assignment
+1. Responsibilities of a Tester and a Test Leader
+Tester
+
+1. Execute test cases
+
+A tester checks whether all the features of the application are working correctly.
+
+2. Find and report defects
+
+If something is not working as expected, the tester reports it with clear details.
+
+3. Verify bug fixes
+
+After the developer fixes the issue, the tester checks it again to make sure it has been solved.
+
+Example during a release cycle:
+Before the app is released, the tester checks the new features, reports any problems, and confirms that all major bugs have been fixed.
+
+Test Leader
+
+1. Prepare the test plan
+
+The test leader decides what needs to be tested and how the testing will be done.
+
+2. Manage the testing team
+
+They assign work to testers and make sure testing is completed on time.
+
+3. Track testing progress
+
+They monitor the testing process and discuss important issues with developers and project managers.
+
+Example during a release cycle:
+The test leader reviews the final test report and decides whether the software is ready for release or if more testing is needed.
+
+2. QA vs QC (Example: Instagram)
+
+I use Instagram almost every day. Quality Assurance (QA) happens before and during development. For example, the team plans how new features like Stories or Reels should work, follows coding standards, and reviews the design to avoid mistakes. Quality Control (QC) happens after the feature is developed. Testers use the app, check if all the buttons and features work properly, and report any bugs before the update is released to users. In simple words, QA focuses on preventing problems, while QC focuses on finding and fixing them.
+
+3. Difference Between Testing and Debugging
+
+Testing and debugging are different but connected activities. Testing is done by the tester, who checks whether the software works correctly and reports any problems. Debugging is done by the developer, who finds the actual cause of the problem in the code and fixes it.
+
+Example:
+Suppose a customer adds a product to the Flipkart cart, but the total price does not update correctly.
+
+Tester: Adds different products to the cart, notices the incorrect total, and reports the issue with the steps to reproduce it.
+Developer: Checks the cart calculation code, finds the mistake in the pricing logic, fixes it, and sends it back for testing.
+4. Basic Test Plan Skeleton
+Test Plan ID
+
+TP-001
+
+Feature Description
+
+This test plan is for the Promo Code feature in a food delivery app. Users can enter a valid coupon code to get discounts on their orders.
+
+Test Scope
+
+The testing will include:
+
+Applying valid promo codes
+Entering invalid or expired promo codes
+Checking discount calculations
+Verifying that only eligible users can use specific offers
+
+Features like payment and order tracking are not included in this test plan.
+
+Roles & Responsibilities
+
+Tester
+
+Execute test cases
+Report bugs
+Verify bug fixes
+
+Test Leader
+
+Prepare the test plan
+Assign testing tasks
+Review test results before release
+Test Environment
+Android phone
+iPhone
+Google Chrome browser
+Stable internet connection
+Test user account with sample promo codes
+Test Deliverables
+Test Plan document
+Test cases
+Bug report
+Test execution report
+Final testing summary
