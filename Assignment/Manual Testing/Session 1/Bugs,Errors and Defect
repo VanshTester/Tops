@@ -1,1 +1,80 @@
+Software Testing Assignment
+1. Homepage Review (Flipkart)
 
+I opened the Flipkart homepage and noticed a few issues that could be considered defects.
+
+Issue 1: Banner image loads slowly
+
+The main banner took a few seconds to load completely.
+I think this is a defect because users may not be able to see the latest offers immediately, which affects their experience.
+
+Issue 2: Some product cards are not properly aligned
+
+On scrolling through the homepage, a few product sections looked slightly misaligned.
+This is a defect because it makes the website look less organized and less professional.
+
+Issue 3: Search suggestions overlap with other content
+
+When typing in the search box, the suggestion list sometimes covers nearby page elements.
+This is a defect because it can make it difficult for users to select the correct option.
+
+
+2. Difference Between Error, Bug, and Defect
+Error
+
+An error is a mistake made by a developer or tester while creating the software. It happens during coding or designing.
+
+Example: A developer accidentally writes the wrong formula to calculate cashback in Paytm.
+
+Bug
+
+A bug is a problem in the software that happens because of an error. It causes the app to behave differently from what was expected.
+
+Example: On Instagram, sometimes the Like button doesn't respond even after tapping it.
+
+Defect
+
+A defect is an issue that is found when testing the software. It means the software is not working according to the requirements.
+
+Example: On IRCTC, the payment page sometimes freezes after entering the OTP.
+
+
+3. App Not Working as Expected
+
+A few days ago, I was making a payment using PhonePe. The money was deducted from my account, but the payment was shown as pending for a few minutes.
+
+I think the reason was a technical limitation. It was most likely caused by a temporary problem with the bank server or network connection rather than a mistake made by the developer.
+
+
+4. Risks in a Food Delivery App
+I) Security Risk
+
+If the app is not secure, hackers could steal users' personal or payment information. This would reduce customer trust in the app.
+
+II) Usability Risk
+
+If the app is difficult to use or the buttons are confusing, users may find it hard to place an order. This could make them switch to another food delivery app.
+
+III) Performance Risk
+
+If the app becomes slow during busy hours, users may not be able to place their orders quickly. Some users may even leave the app before completing the order.
+
+
+5. Defect or Risk
+(a) The "Book Now" button does not respond on mobile.
+
+Answer: Defect
+
+Reason: The button is supposed to work, but it doesn't. Since an existing feature is not functioning correctly, it is a defect.
+
+(b) There is no logout option.
+
+Answer: Defect
+
+Reason: If the project requires a logout option and it is missing, then it is a defect because an important feature has not been implemented.
+
+(c) The app sometimes loads slowly during IPL match days.
+
+Answer: Risk
+
+Reason: During IPL matches, many users may use the app at the same time. This heavy traffic can slow down the app, so it is considered a performance risk.
