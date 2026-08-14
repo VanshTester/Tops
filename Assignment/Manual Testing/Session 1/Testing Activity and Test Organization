@@ -1,0 +1,47 @@
+ 1. Testing Activities – Instagram
+
+I would choose **Instagram** for this example.
+
+| Testing Activity         | What it checks                                                                  |
+| ------------------------ | ------------------------------------------------------------------------------- |
+| 1. Functional Testing    | Checks whether the new feature works correctly according to the requirements.   |
+| 2. UI Testing            | Checks whether buttons, icons, text, and screens are displayed properly.        |
+| 3. Compatibility Testing | Checks whether the feature works on different devices and operating systems.    |
+| 4. Performance Testing   | Checks whether the app remains fast and responsive while using the new feature. |
+| 5. Security Testing      | Checks whether user data and account information are properly protected.        |
+| 6. Regression Testing    | Checks that the new feature has not affected existing Instagram features.       |
+
+---
+
+2. RACI Chart – Shopping Cart Feature
+
+**R = Responsible, A = Accountable, C = Consulted, I = Informed**
+
+| Activity         | Tester | Test Leader | Developer | Product Owner |
+| ---------------- | ------ | ----------- | --------- | ------------- |
+| Test Planning    | R      | A           | C         | I             |
+| Test Case Design | R      | A           | C         | C             |
+| Test Execution   | R      | A           | C         | I             |
+| Bug Reporting    | R      | A           | C         | I             |
+
+**Simple explanation:** The Tester does most of the actual testing work, while the Test Leader manages and approves the testing activities. The Developer helps with technical issues, and the Product Owner provides requirements and stays updated about progress.
+
+---
+
+3. Job Description – Test Leader
+
+A **Test Leader** manages the testing activities for the new BookMyShow movie booking feature. They assign testing tasks to team members and monitor daily testing progress. They review test cases and bug reports and help decide which issues should be fixed first. They also coordinate with developers and the Product Owner to decide whether the feature is ready for release.
+
+---
+
+ 4. Testing Activities for Dark Mode
+
+| Testing Activity         | Performed By | What it involves                                                                        |
+| ------------------------ | ------------ | --------------------------------------------------------------------------------------- |
+| 1. Test Planning         | Test Leader  | Decides the testing scope, resources, and schedule for the Dark Mode feature.           |
+| 2. Test Case Design      | Tester       | Creates test cases for turning Dark Mode ON and OFF and checking its behavior.          |
+| 3. Functional Testing    | Tester       | Checks whether the Dark Mode toggle works correctly throughout the app.                 |
+| 4. UI Testing            | Tester       | Checks whether text, icons, buttons, and backgrounds look correct in Dark Mode.         |
+| 5. Compatibility Testing | Tester       | Checks Dark Mode on different devices and supported operating systems.                  |
+| 6. Test Review           | Test Leader  | Reviews test results and makes sure important areas have been properly tested.          |
+| 7. Release Decision      | Test Leader  | Reviews major bugs and decides whether the feature is ready from a testing perspective. |
