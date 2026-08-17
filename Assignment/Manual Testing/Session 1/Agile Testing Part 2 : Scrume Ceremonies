@@ -1,0 +1,177 @@
+Sure — here are the answers in a **simple, natural, human-written style** that you can use directly in your assignment.
+
+# 1. Sample Sprint Board – Food Delivery App
+
+**Sprint Name:** Food Delivery App – Sprint 1
+
+| Task ID | Task                               | Type        | Status      |
+| ------- | ---------------------------------- | ----------- | ----------- |
+| FD-101  | Design and implement menu display  | Development | To Do       |
+| FD-102  | Implement food order placement     | Development | To Do       |
+| FD-103  | Integrate payment gateway          | Development | In Progress |
+| FD-104  | Develop delivery tracking          | Development | To Do       |
+| FD-105  | Add user review and rating feature | Development | To Do       |
+
+### Sample JIRA Board
+
+```text
+┌──────────────────┬────────────────────┬──────────────────┐
+│      TO DO       │    IN PROGRESS     │       DONE       │
+├──────────────────┼────────────────────┼──────────────────┤
+│ FD-101           │ FD-103             │                  │
+│ Menu Display     │ Payment Integration│                 │
+│                  │                    │                  │
+│ FD-102           │                    │                  │
+│ Order Placement  │                    │                  │
+│                  │                    │                  │
+│ FD-104           │                    │                  │
+│ Delivery Tracking│                    │                  │
+│                  │                    │                  │
+│ FD-105           │                    │                  │
+│ User Reviews     │                    │                  │
+└──────────────────┴────────────────────┴──────────────────┘
+```
+
+**Note:** This is a sample JIRA Scrum board. In an actual JIRA project, these tasks would be created as issues and moved across the board as the team works on them.
+
+---
+
+# 2. Daily Standup Script – Music Streaming App
+
+**Feature:** New playlist-sharing feature
+**Meeting:** Daily Scrum/Standup
+
+**Scrum Master:** Good morning everyone. Let's quickly go through what we did yesterday, what we are planning today, and any blockers. I'll start with the developer.
+
+**Developer:** Yesterday, I completed the basic playlist-sharing functionality and connected it with the user profile. Today, I will work on sharing the playlist through a link. I don't have any blockers.
+
+**Tester:** Yesterday, I prepared test cases for playlist sharing and tested the basic sharing flow. Today, I will test different types of playlists and check whether shared links open correctly. My only blocker is that the latest build has not been deployed to the testing environment yet.
+
+**UI Designer:** Yesterday, I completed the sharing screen design. Today, I will make some small UI improvements based on the team's feedback. I don't have any blockers.
+
+**Scrum Master:** The testing build issue is noted. I will coordinate with the development team so that the latest build is available today.
+
+**Conclusion:**
+The standup is short and focused. Each member explains **what was done, what will be done, and whether anything is blocking the work**.
+
+---
+
+# 3. Sprint Planning – Flipkart-Style Shopping Cart
+
+### User Story 1 – Add to Cart
+
+**User Story:**
+“As a customer, I want to add a product to my cart so that I can purchase it later.”
+
+**Tasks:**
+
+1. Add an **Add to Cart** button.
+2. Connect the button with the cart service.
+3. Display a confirmation after adding the product.
+4. Update the cart item count.
+
+**Acceptance Criteria:**
+
+* Product should be added when the user clicks **Add to Cart**.
+* Correct product name, price and quantity should appear in the cart.
+* Cart count should increase correctly.
+* User should receive a clear confirmation.
+
+---
+
+### User Story 2 – Update Quantity
+
+**User Story:**
+“As a customer, I want to increase or decrease the quantity of a product in my cart.”
+
+**Tasks:**
+
+1. Add plus and minus quantity buttons.
+2. Update the quantity when the buttons are clicked.
+3. Recalculate the product price.
+4. Update the total cart amount.
+
+**Acceptance Criteria:**
+
+* Quantity should increase when the **+** button is selected.
+* Quantity should decrease when the **−** button is selected.
+* Product total should change according to the quantity.
+* Quantity should not go below the allowed minimum.
+
+---
+
+### User Story 3 – Remove Item
+
+**User Story:**
+“As a customer, I want to remove a product from my cart if I no longer want to buy it.”
+
+**Tasks:**
+
+1. Add a **Remove** option for each cart item.
+2. Connect the remove button to the cart service.
+3. Update the cart count.
+4. Recalculate the total amount.
+
+**Acceptance Criteria:**
+
+* The selected product should disappear from the cart.
+* Cart quantity/count should update correctly.
+* Total amount should be recalculated.
+* Other products in the cart should remain unchanged.
+
+---
+
+# 4. Sprint Review Summary – Movie Ticket Booking App
+
+**Sprint:** Movie Booking – Sprint 2
+
+### Features Delivered
+
+During this sprint, the team successfully completed:
+
+* Movie search functionality.
+* Theatre and show-time selection.
+* Seat selection.
+* Basic booking confirmation.
+* Integration of booking details with the user's booking history.
+
+### What Went Well
+
+The team completed most of the planned stories within the sprint. Testing was performed alongside development, so some bugs were identified and fixed before the sprint review.
+
+### Stakeholder Feedback
+
+Stakeholders liked the simple movie-search and seat-selection flow. They suggested making the show-time selection easier to understand and displaying the final ticket price more clearly before the user confirms the booking.
+
+### Conclusion
+
+Overall, the sprint was successful. The main features were delivered, and the stakeholder feedback will be considered for the next sprint.
+
+---
+
+# 5. Sprint Retrospective – Zomato Restaurant Search
+
+**Sprint Feature:** Restaurant Search
+
+### What Went Well
+
+**1. Good teamwork:**
+Developers and testers worked together during the sprint, which helped identify search-related bugs early.
+
+**2. Search functionality was completed on time:**
+The basic restaurant search and filtering features were completed within the planned sprint.
+
+### What Could Be Improved
+
+**1. Test data preparation:**
+The team spent extra time creating different restaurant and location data for testing.
+
+**2. Late requirement clarification:**
+Some search-filter requirements were clarified late in the sprint, which caused some rework.
+
+### Action Item for Next Sprint
+
+**Prepare test data and clarify search/filter requirements before development starts.**
+
+**Final Conclusion:**
+The retrospective showed that the team worked well together, but better preparation and earlier clarification of requirements could make the next sprint smoother and faster.
