@@ -1,0 +1,126 @@
+Sure — here is a **simple, human-written answer** that you can use for your assignment. For Q1 and Q4, I’m using **sample/mock documents** so the answer doesn’t pretend that I personally downloaded or inspected something I didn’t.
+
+# 1. Static Review of Terms & Conditions
+
+**Document selected:** Sample Terms & Conditions of a food-delivery app
+
+Static testing means reviewing a document without actually executing the application. I read the terms and looked for statements that could be difficult for a normal user to understand.
+
+| No. | Unclear / Ambiguous Statement                            | Why It Could Confuse Users                                                                  |
+| --- | -------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| 1   | “We may modify the services from time to time.”          | It does not clearly explain what type of changes can be made or how users will be informed. |
+| 2   | “Additional charges may apply in certain circumstances.” | The user may not know what these circumstances are or how much the charges could be.        |
+| 3   | “Offers are subject to applicable conditions.”           | The actual conditions are not mentioned clearly in the statement.                           |
+| 4   | “We reserve the right to suspend your account.”          | It does not clearly explain what actions can result in account suspension.                  |
+| 5   | “Delivery times are only estimates.”                     | Users may not understand how much the actual delivery time can vary.                        |
+
+### Conclusion
+
+The main issue I found during the static review is that legal documents often use broad terms such as **“certain circumstances,” “applicable conditions,” and “from time to time.”** These statements may be legally useful, but they can be confusing for ordinary users. They could be made clearer by using specific examples and simpler language.
+
+---
+
+# 2. Static Testing vs Dynamic Testing
+
+| Point               | Static Testing                                                        | Dynamic Testing                                                                                             |
+| ------------------- | --------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| **Meaning**         | Testing without running the software.                                 | Testing by actually running and using the software.                                                         |
+| **Main Focus**      | Finds issues in requirements, designs, documents or code.             | Finds bugs that occur while the application is running.                                                     |
+| **Example**         | Reviewing Instagram's privacy policy to check for unclear statements. | Creating an Instagram account and filling in the signup form to check whether registration works correctly. |
+| **Another Example** | Reviewing a Zomato requirement document for missing information.      | Opening Zomato and placing a test order to check the actual order flow.                                     |
+
+**In simple words:**
+**Static testing = checking the work without executing it.**
+**Dynamic testing = checking the application by actually using it.**
+
+---
+
+# 3. Code Walkthrough – Swiggy Apply Coupon Function
+
+If I were reviewing the code for an **Apply Coupon** feature, I would raise these questions:
+
+1. **What happens when the user enters an invalid or non-existing coupon?**
+   The function should reject it and return a clear error message.
+
+2. **Does the code check the coupon expiry date?**
+   An expired coupon should not be accepted.
+
+3. **Is the minimum order value checked correctly?**
+   For example, if a coupon requires a minimum order of ₹500, it should not work for a ₹400 order.
+
+4. **Can the same coupon be applied multiple times accidentally?**
+   The code should check whether the coupon has already been used or applied.
+
+5. **Is the discount calculation correct?**
+   I would check both percentage-based and fixed-amount discounts and make sure the final payable amount cannot become incorrect.
+
+**Overall point:**
+I would also check whether the function handles unexpected or missing input without causing the application to crash.
+
+---
+
+# 4. Mock Inspection of a Bug Report
+
+**Sample Bug Report:**
+
+> **Title:** Coupon not working
+> **Description:** I tried a coupon but it didn't work. Please fix it.
+
+After reviewing this report, I would suggest the following improvements:
+
+### 1. Add clear reproduction steps
+
+The report does not explain how the problem occurred.
+
+**Better format:**
+
+1. Open the application.
+2. Add a product to the cart.
+3. Open the coupon section.
+4. Enter the coupon code.
+5. Tap **Apply**.
+
+This allows the developer and tester to reproduce the issue easily.
+
+### 2. Clearly mention expected and actual results
+
+Instead of only saying **“coupon didn't work,”** the report should explain:
+
+* **Expected:** Valid coupon should be applied and discount should be shown.
+* **Actual:** Coupon is rejected and an error message appears.
+
+This makes the problem much easier to understand.
+
+### 3. Include important test information
+
+The report should include details such as:
+
+* Coupon code used
+* Cart/order value
+* App version
+* Device/OS
+* Screenshot or screen recording, if useful
+* Exact error message
+
+### Improved Bug Report Example
+
+**Title:** Valid coupon is rejected when cart value is above the minimum amount
+
+**Steps to Reproduce:**
+
+1. Add items worth ₹700 to the cart.
+2. Open the coupon section.
+3. Enter a valid coupon code.
+4. Tap **Apply**.
+
+**Expected Result:**
+The coupon should be applied and the applicable discount should be deducted from the order total.
+
+**Actual Result:**
+The application shows an invalid-coupon message even though the coupon is valid.
+
+**Environment:**
+Android app – latest test build
+
+**Conclusion:**
+A detailed bug report saves time because developers can understand and reproduce the problem without having to ask for basic information again.
