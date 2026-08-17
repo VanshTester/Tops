@@ -1,1 +1,91 @@
+# 1. High-Level Test Scenarios – WhatsApp “Send Message”
+
+I selected the **Send Message** feature because it is a simple and commonly used feature.
+
+1. **Send a message to a single contact** – Verify that a text message is successfully sent and delivered to the selected person.
+2. **Send a message to a group** – Check that the message reaches all members of the group.
+3. **Send an empty message** – Verify that the app does not allow a blank message to be sent.
+4. **Send a long message** – Check whether the app handles a message containing a large number of characters properly.
+5. **Send a message with poor/no internet connection** – Verify that the message shows an appropriate pending or failed status instead of disappearing.
+
+---
+
+# 2. 10 Test Scenarios – Search Restaurant
+
+For a Zomato-like app, I would test the search feature from both the **functional** and **non-functional** side.
+
+| No. | Test Scenario                                                                                         | Type                              |
+| --- | ----------------------------------------------------------------------------------------------------- | --------------------------------- |
+| 1   | Search using the exact name of an available restaurant.                                               | Functional                        |
+| 2   | Search using only part of a restaurant name, such as “Dom” for “Domino’s”.                            | Functional                        |
+| 3   | Search using a cuisine or food item such as “Pizza” or “Biryani”.                                     | Functional                        |
+| 4   | Search with an incorrect or random restaurant name and verify the no-results message.                 | Functional                        |
+| 5   | Apply filters such as rating, price range, and delivery time and verify the results.                  | Functional                        |
+| 6   | Search with the search box left empty and check the app behaviour.                                    | Functional                        |
+| 7   | Enter special characters or numbers in the search box and check how the app handles them.             | Functional                        |
+| 8   | Check whether search results are displayed within an acceptable time.                                 | Non-Functional – Performance      |
+| 9   | Verify that the search page and filters are displayed properly on different screen sizes/devices.     | Non-Functional – UI/Compatibility |
+| 10  | Check that the search feature does not freeze or crash when many searches are performed continuously. | Non-Functional – Stability        |
+
+---
+
+# 3. 5 Detailed Test Cases – Search Restaurant
+
+I selected the scenario **“Search using the exact name of an available restaurant.”**
+
+| Test Case ID | Steps                                                                                             | Test Data                | Expected Result                                                                                     | Actual Result |
+| ------------ | ------------------------------------------------------------------------------------------------- | ------------------------ | --------------------------------------------------------------------------------------------------- | ------------- |
+| **TC-SR-01** | 1. Open the app. 2. Go to Search. 3. Enter a valid restaurant name. 4. Tap Search.                | Restaurant: **Domino's** | The correct restaurant should appear in the search results.                                         |               |
+| **TC-SR-02** | 1. Open Search. 2. Enter the complete restaurant name in lowercase. 3. Search.                    | `domino's`               | The app should still display the relevant restaurant.                                               |               |
+| **TC-SR-03** | 1. Open Search. 2. Enter the restaurant name with an extra space at the beginning/end. 3. Search. | `Domino's`               | The app should ignore unnecessary spaces and show the correct result.                               |               |
+| **TC-SR-04** | 1. Open Search. 2. Enter the name of a restaurant that does not exist. 3. Search.                 | `ABC Food House 999`     | A clear “No results found” type of message should be displayed.                                     |               |
+| **TC-SR-05** | 1. Open Search. 2. Enter the restaurant name. 3. Start the search multiple times quickly.         | `Domino's`               | The app should return the correct results without freezing, crashing, or showing duplicate results. |               |
+
+---
+
+# 4. Excel Test Case Template – Add to Playlist
+
+I created the Excel sheet with the requested **4 test cases** and columns:
+
+**Test Case ID | Scenario | Steps | Test Data | Expected Result**
+
+[Download the Excel test case sheet](sandbox:/mnt/data/Spotify_Add_to_Playlist_Test_Cases.xlsx)
+
+---
+
+# 5. Manual Test Script – Login with OTP
+
+**Feature:** Login with OTP
+**Application:** Paytm-style app
+
+### Valid OTP Scenario
+
+1. Open the application.
+2. Go to the Login screen.
+3. Enter a registered mobile number.
+4. Tap **Send OTP** or **Continue**.
+5. Verify that an OTP is sent to the registered mobile number.
+6. Enter the correct OTP received.
+7. Tap **Verify/Login**.
+8. Check whether the user is successfully logged in and taken to the home screen.
+9. Verify that the user's account information is displayed correctly.
+
+**Expected result:** The user should be logged in successfully after entering the correct OTP.
+
+### Invalid OTP Scenario
+
+1. Open the Login screen.
+2. Enter a registered mobile number.
+3. Request an OTP.
+4. Enter an incorrect OTP.
+5. Tap **Verify/Login**.
+6. Check the error message shown by the application.
+
+**Expected result:** The login should fail and a clear message such as **“Invalid OTP”** should be displayed.
+
+### Additional Checks
+
+The tester should also check an **expired OTP**, requesting a **new OTP**, entering an **incomplete OTP**, and trying to submit the OTP without entering anything. The application should handle these cases properly without crashing.
+
+**Overall:** The OTP login feature should allow genuine users to log in easily while preventing login with invalid or expired OTPs.
 
