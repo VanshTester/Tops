@@ -1,0 +1,114 @@
+Sure — here are the answers in a **simple, natural, human-written style** suitable for an assignment.
+
+# 1. End-to-End Test Scenario – BookMyShow Movie Booking
+
+**Scenario:** Successfully book a movie ticket from start to finish.
+
+**Steps:**
+
+1. Open the BookMyShow application/website.
+2. Log in using valid user credentials.
+3. Select the required city/location.
+4. Search for the movie by its name.
+5. Select the movie from the search results.
+6. Choose a theatre and available show time.
+7. Select the required seats.
+8. Verify the selected seats and ticket price.
+9. Proceed to the payment page.
+10. Select a payment method and complete the payment.
+11. Wait for the booking confirmation.
+12. Open the booking section and verify the booking details.
+
+**Expected Result:**
+The payment should be completed successfully and the user should receive a booking confirmation containing the correct movie, theatre, show time, seats and booking amount.
+
+**Conclusion:**
+This is an end-to-end test because it checks the complete journey from **movie search to successful booking confirmation**.
+
+---
+
+# 2. System Integration Test – Zomato Food Order
+
+**Scenario:** Place a food order and track it successfully.
+
+| Step | Action                                        | Expected Result                                                         |
+| ---- | --------------------------------------------- | ----------------------------------------------------------------------- |
+| 1    | Open Zomato and log in.                       | User should log in successfully.                                        |
+| 2    | Set/select the delivery location.             | Restaurants available for that location should be displayed.            |
+| 3    | Search for a restaurant or food item.         | Relevant restaurants/items should appear.                               |
+| 4    | Select a restaurant.                          | Restaurant menu should load correctly.                                  |
+| 5    | Select food items and add them to the cart.   | Selected items should appear in the cart.                               |
+| 6    | Open the cart and verify quantity and price.  | Correct items, taxes/charges and total should be displayed.             |
+| 7    | Enter/select the delivery address.            | Correct delivery address should be shown.                               |
+| 8    | Select a payment method and complete payment. | Payment should be processed successfully.                               |
+| 9    | Confirm the order.                            | Order should be created successfully.                                   |
+| 10   | Open order tracking.                          | Current order status should be displayed correctly.                     |
+| 11   | Check order updates.                          | Status should update as the restaurant prepares and delivers the order. |
+
+### Integration Points Tested
+
+* **Login ↔ User Account**
+* **Location ↔ Restaurant Search**
+* **Restaurant ↔ Menu**
+* **Cart ↔ Pricing**
+* **Address ↔ Delivery**
+* **Order ↔ Payment**
+* **Order ↔ Tracking/Notifications**
+
+**Conclusion:**
+This test checks whether different parts of the application communicate correctly with each other during the complete food-ordering process.
+
+---
+
+# 3. End-to-End Workflow – Flipkart-Style Shopping App
+
+### Positive Scenario – Successful Purchase
+
+**Steps:**
+
+1. Open the shopping application.
+2. Log in with valid credentials.
+3. Search for a required product.
+4. Select an available product.
+5. Click **Add to Cart**.
+6. Open the cart and verify the product and price.
+7. Enter a valid discount coupon.
+8. Verify that the coupon discount is applied.
+9. Select a valid delivery address.
+10. Select a payment method.
+11. Complete the payment.
+12. Check the order confirmation.
+
+**Expected Result:**
+The complete shopping journey should work successfully and the order should be placed with the correct product, discount, address and final amount.
+
+### Negative Scenario – Invalid Coupon
+
+**Steps:**
+
+1. Add an available product to the cart.
+2. Enter an invalid or expired coupon.
+3. Try to apply the coupon.
+
+**Expected Result:**
+The coupon should be rejected with a clear error message. The original product price should remain unchanged, and the user should still be able to continue with the purchase without the invalid discount.
+
+---
+
+# 4. Paytm Mobile Recharge – System Integrations
+
+The main integrations involved in a mobile recharge flow are:
+
+| Integration Point       | Test Case                                                  | Expected Result                                                                        |
+| ----------------------- | ---------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| **User Login**          | Log in using valid Paytm credentials.                      | User should be authenticated and taken to the account/home page.                       |
+| **Mobile Number**       | Enter a valid mobile number for recharge.                  | The number should be accepted and the relevant recharge options should be shown.       |
+| **Plan Selection**      | Select an available recharge plan.                         | Correct plan amount, validity and benefits should be displayed.                        |
+| **Payment Gateway**     | Select a payment method and complete the payment.          | Payment should be processed and the recharge should be successful.                     |
+| **Recharge System**     | Verify the recharge status after successful payment.       | Recharge should be marked as successful for the selected number.                       |
+| **SMS/Notification**    | Complete a successful recharge and check for confirmation. | A recharge confirmation notification/SMS should be generated with the correct details. |
+| **Transaction History** | Open transaction/recharge history after the recharge.      | The latest recharge should appear with the correct amount and status.                  |
+
+### Final Conclusion
+
+The Paytm recharge process depends on several systems working together. Testing each integration point helps ensure that **login, recharge plans, payment, recharge processing, notifications and transaction history** all work correctly as one complete flow.
