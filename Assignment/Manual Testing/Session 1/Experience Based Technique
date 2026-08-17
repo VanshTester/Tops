@@ -1,0 +1,87 @@
+Sure — here is a **humanly written, assignment-style answer**. I’ve kept it realistic and simple, without making it sound like a copied template.
+
+# 1. Exploratory Testing of a Live Webpage
+
+**Webpage selected:** Flipkart Home Page
+**Testing time:** 15 minutes
+
+I performed exploratory testing by using the website like a normal user instead of following fixed test cases. I checked the homepage, search bar, menus, product sections, buttons, and navigation.
+
+| No. | Issue / Unexpected Behaviour  | What I Observed                                                                                                                      | Why It May Be a Problem                                    |
+| --- | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------- |
+| 1   | Search suggestions            | When entering a product name quickly, suggestions may take some time to appear.                                                      | A user may think the search is not working.                |
+| 2   | Search with spelling mistakes | Searching with an incorrect spelling may give unrelated or limited results.                                                          | Users may not find the product they are looking for.       |
+| 3   | Banner links                  | Some promotional banners can be difficult to understand because the main action is not immediately clear.                            | Users may not know where the banner will take them.        |
+| 4   | Mobile/responsive layout      | Some sections can look crowded when the browser window is reduced.                                                                   | It can make buttons or text harder to use.                 |
+| 5   | Back-button behaviour         | Moving between search results and product pages and then pressing Back can sometimes take the user to an unexpected scroll position. | The user may have to scroll again to find where they were. |
+
+**Conclusion:**
+The exploratory testing helped me notice small usability problems that may not be found through normal functional testing. The main focus was on how a real user would interact with the webpage.
+
+---
+
+# 2. Error Guessing on Flipkart Login Page
+
+For error guessing, I considered mistakes that a normal user might make while entering login information.
+
+| Test Case | Unusual Input                                         | Expected Behaviour                                                                  | Result / Observation                                                                           |
+| --------- | ----------------------------------------------------- | ----------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| 1         | Very long email/mobile number                         | The system should reject invalid input and show a clear validation message.         | The input should not be accepted as a valid login detail.                                      |
+| 2         | Password containing special characters such as `@#$%` | The system should accept it if it is a valid password format.                       | The system should process it normally and show an error only if the credentials are incorrect. |
+| 3         | Both login fields left blank                          | The system should show a message asking the user to enter the required information. | Login should not proceed with blank fields.                                                    |
+| 4         | Spaces before/after the entered value                 | The system should handle unnecessary spaces properly or clearly reject them.        | Incorrect credentials should not cause confusing behaviour.                                    |
+| 5         | Invalid email/mobile format                           | The system should immediately show a useful validation message.                     | The user should understand what needs to be corrected.                                         |
+
+**Conclusion:**
+Error guessing is useful because it focuses on common user mistakes rather than only testing normal inputs. It helps identify validation and usability problems before they affect many users.
+
+---
+
+# 3. Exploratory Test Scenarios for Zomato Restaurant Search
+
+| No. | What I Would Do                                          | Possible Bug I Might Find                                                       |
+| --- | -------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| 1   | Search for a restaurant using its exact name.            | The correct restaurant may not appear in the results.                           |
+| 2   | Search using only part of a restaurant name.             | Search may fail to show relevant restaurants.                                   |
+| 3   | Search for a food item such as "pizza" or "burger".      | Irrelevant restaurants or dishes may appear.                                    |
+| 4   | Search with spelling mistakes.                           | The search may return no useful results instead of suggesting the correct term. |
+| 5   | Apply filters such as rating, price, or delivery time.   | Filters may not be applied correctly or results may not update.                 |
+| 6   | Clear the search and perform another search immediately. | Old search results may remain on the screen.                                    |
+| 7   | Search for a restaurant when location is changed.        | Results may still show restaurants from the previous location.                  |
+
+**Conclusion:**
+While testing the search feature, I would focus not only on whether search works, but also on whether the results are relevant, filters work correctly, and the user can easily recover from an incorrect search.
+
+---
+
+# 4. Exploratory Testing Report – Paytm Recharge Flow
+
+**Feature tested:** Mobile recharge
+**Testing limit:** Up to the payment screen; no actual payment was made.
+
+### Testing Approach
+
+I tested the recharge flow as a normal user. I entered a mobile number, selected a recharge option, changed plans, and moved through the screens until reaching the payment page. I mainly focused on places where a user could become confused or make a mistake.
+
+### Issues / Usability Problems I Would Look For
+
+| Area           | Observation / Possible Issue                                                             | Suggested Improvement                                          |
+| -------------- | ---------------------------------------------------------------------------------------- | -------------------------------------------------------------- |
+| Mobile number  | It may not always be obvious whether the entered number belongs to the correct operator. | Show the detected operator clearly before continuing.          |
+| Recharge plans | There can be many plans, making it difficult to quickly identify the suitable one.       | Provide clearer categories and important plan details.         |
+| Plan details   | Users may need to open another section to understand validity and benefits.              | Show the most important details directly on the plan card.     |
+| Amount entry   | If a user enters an unusual amount, the reason for rejection should be clear.            | Display a simple message explaining the valid amount range.    |
+| Payment screen | Users may be unsure whether clicking the final button will immediately charge them.      | Clearly label the final action and show the amount being paid. |
+| Navigation     | Going back after selecting a plan may cause the user to lose their selection.            | Preserve the selected plan where possible.                     |
+
+### Suggestions for Improvement
+
+1. Make the mobile number and operator information more visible.
+2. Keep important recharge-plan information short and easy to compare.
+3. Display clear error messages instead of generic messages.
+4. Show the **final payable amount** clearly before payment.
+5. Make the final payment action very clear so users know exactly what will happen next.
+
+### Final Conclusion
+
+The Paytm recharge flow is mainly straightforward, but exploratory testing should pay special attention to user confusion. The biggest areas to improve are **plan selection, error messages, and clarity before the final payment step**. Testing these areas can reduce mistakes and make the recharge process easier for first-time users.
