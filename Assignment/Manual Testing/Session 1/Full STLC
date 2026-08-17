@@ -1,1 +1,107 @@
+## 1. 7 Main Phases of STLC
+
+| STLC Phase                    | What happens for a Login feature                                                                           |
+| ----------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| **1. Requirement Analysis**   | The tester studies requirements such as valid login, wrong password, forgot password, and account lockout. |
+| **2. Test Planning**          | The testing team decides the testing approach, resources, tools, and time required for Login testing.      |
+| **3. Test Case Design**       | Test cases are prepared for valid credentials, invalid credentials, blank fields, password rules, etc.     |
+| **4. Test Environment Setup** | A suitable mobile/web environment, database, browser, and test accounts are prepared.                      |
+| **5. Test Execution**         | Testers run the Login test cases and compare the actual results with expected results.                     |
+| **6. Defect Reporting**       | Any problems found during testing are reported to developers with proper details and evidence.             |
+| **7. Test Closure**           | Testing is completed, results are summarized, and lessons learned are recorded for future testing.         |
+
+---
+
+## 2. Entry and Exit Criteria for Each STLC Phase
+
+| STLC Phase         | Entry Criteria                                              | Exit Criteria                                                          |
+| ------------------ | ----------------------------------------------------------- | ---------------------------------------------------------------------- |
+| **Planning**       | Login requirements are available and understood.            | Test strategy, resources, and schedule are finalized.                  |
+| **Monitoring**     | Testing activities have started.                            | Progress, defects, and test coverage are regularly tracked.            |
+| **Analysis**       | Requirements and acceptance criteria are available.         | Testable requirements and testing conditions are identified.           |
+| **Design**         | Test conditions are identified.                             | Test cases, test data, and expected results are prepared and reviewed. |
+| **Implementation** | Approved test cases are available.                          | Test environment and required test data are ready for execution.       |
+| **Execution**      | Build is available and test environment is working.         | Planned test cases are executed and results are recorded.              |
+| **Reporting**      | Test execution results and defect details are available.    | Test results and major defects are communicated to the team.           |
+| **Closure**        | Testing objectives are completed and results are available. | Final report is prepared and testing is officially closed.             |
+
+---
+
+## 3. Sample Test Plan – Login Module
+
+**Project:** Zomato-like Food Delivery App
+**Module:** Login
+**Testing Type:** Functional, Negative, Boundary, Compatibility and Usability Testing
+
+### Objectives
+
+The main objective is to make sure that users can log in safely and easily using valid credentials. The testing will also check how the application behaves when users enter incorrect, blank, or boundary-value data.
+
+### Scope
+
+**In Scope:**
+
+* Login using registered mobile number/email and password/OTP.
+* Valid and invalid login attempts.
+* Blank and incorrect input fields.
+* Password/OTP validation.
+* Error messages.
+* Forgot password/OTP functionality.
+* Login on supported browsers and mobile devices.
+
+**Out of Scope:**
+
+* Restaurant search and food ordering.
+* Payment processing.
+* Other modules not related to Login.
+
+### Resources
+
+* **Testers:** 2 QA testers
+* **Developer:** 1 developer for fixing defects
+* **Test Lead:** 1 person for planning and monitoring
+* **Test Environment:** Android/iOS device and web browser
+* **Test Data:** Valid, invalid and boundary-value login accounts
+
+### Schedule
+
+| Activity                         | Timeline |
+| -------------------------------- | -------- |
+| Requirement Analysis             | Day 1    |
+| Test Planning & Test Case Design | Day 2    |
+| Environment Setup                | Day 3    |
+| Test Execution                   | Day 4–5  |
+| Retesting & Regression Testing   | Day 6    |
+| Test Summary & Closure           | Day 7    |
+
+**Expected Result:** Login should work correctly for valid users and should display clear error messages for invalid inputs.
+
+---
+
+## 4. Login Test Cases – BookMyShow-style App
+
+| TC ID    | Scenario                        | Test Steps                                                                                                                                       | Expected Result                                                                                   | Actual Result                                             |
+| -------- | ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------- | --------------------------------------------------------- |
+| **TC01** | Positive – Valid Login          | 1. Open the app. 2. Enter a registered mobile number/email. 3. Enter correct password/OTP. 4. Click **Login**.                                   | User should successfully log in and reach the home screen.                                        | **Passed** – User logged in successfully.                 |
+| **TC02** | Negative – Invalid Password     | 1. Open Login page. 2. Enter a registered email/mobile number. 3. Enter an incorrect password. 4. Click **Login**.                               | Login should be rejected and a suitable error message should be displayed.                        | **Passed** – Error message was displayed.                 |
+| **TC03** | Boundary – Maximum Input Length | 1. Open Login page. 2. Enter the maximum allowed number of characters in the email/mobile field. 3. Enter valid credentials. 4. Click **Login**. | Application should accept the allowed maximum length and should not crash or behave unexpectedly. | **Passed** – Maximum allowed input was handled correctly. |
+
+---
+
+## 5. Test Summary Report – Login Module
+
+**Project:** BookMyShow-style App
+**Module:** Login
+**Testing Period:** Day 4–6
+**Total Test Cases:** 3
+**Passed:** 3
+**Failed:** 0
+
+### Summary
+
+Login testing has been completed successfully. All three planned test cases covering positive, negative, and boundary scenarios were executed and passed.
+
+No major defects were found during testing. Valid users were able to log in successfully, incorrect credentials were handled properly, and the maximum allowed input was accepted without any issue.
+
+**Final Status:** ✅ **Testing Completed – Login module is ready for the next stage/release, subject to overall project approval.**
 
