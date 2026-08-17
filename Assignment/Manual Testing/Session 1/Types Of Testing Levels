@@ -1,1 +1,98 @@
+## 1. Unit Testing Scenario – Add to Cart
+
+**Scenario:** Test the `Add to Cart` function in a shopping app like Flipkart.
+
+At the unit level, the developer tests the function separately without involving the complete application.
+
+* **Input:** Product ID = 101, quantity = 1.
+* **Action:** Call the `addToCart()` function.
+* **Expected Result:** The product should be added to the cart and the cart count should increase by 1.
+* **Another check:** If the same product is added again, the function should update its quantity correctly instead of creating an incorrect cart entry.
+
+**Example:** If the cart initially has 2 items, adding one new item should make the cart count **3**.
+
+---
+
+## 2. Integration Testing Scenario – Payment Flow
+
+**Scenario:** Test the interaction between the Order module and Payment Gateway in a food delivery app like Zomato.
+
+**Steps:**
+
+1. User selects food and places an order.
+2. The Order module creates the order and sends the payment amount to the payment gateway.
+3. User completes the payment.
+4. Payment gateway sends the payment status back to the app.
+5. The Order module receives the successful payment response.
+6. The order status should change to **Confirmed**.
+
+**Expected Result:** The order and payment modules should communicate correctly. If payment is successful, the order should be confirmed. If payment fails, the order should not be incorrectly marked as paid.
+
+---
+
+## 3. System Testing Scenario – Movie Ticket Booking
+
+**Scenario:** Test the complete ticket booking process in a BookMyShow-style application.
+
+**Steps:**
+
+1. Open the application.
+2. Search for a movie.
+3. Select the movie and theatre.
+4. Choose the date and show timing.
+5. Select available seats.
+6. Proceed to payment.
+7. Complete the payment.
+8. Check the booking confirmation.
+
+**Expected Result:** The complete process should work smoothly from movie search to successful booking. The selected seats should be reserved, payment should be processed correctly, and the user should receive a booking confirmation with the movie, theatre, show time, and seat details.
+
+---
+
+## 4. Acceptance Testing (UAT/SAT) – Playlist Feature
+
+**Scenario:** Test a new playlist feature in a music app like Spotify from a real user's point of view.
+
+**Tester:** Selected real users or business/customer representatives.
+
+**Steps:**
+
+1. User creates a new playlist.
+2. User gives the playlist a name.
+3. User searches for songs and adds them to the playlist.
+4. User removes a song and adds another one.
+5. User plays the playlist.
+6. User checks whether the playlist is saved and available later.
+
+**Expected Result:** The feature should be simple to understand and should allow users to create, edit, save, and play playlists without problems.
+
+**User Feedback Expected:** Users may comment on whether the feature is easy to use, whether the buttons are clear, and whether anything feels confusing or inconvenient.
+
+---
+
+## 5. Beta Testing Scenario – Group Chat Feature
+
+**Scenario:** Beta test a new group chat feature in a messaging app like WhatsApp.
+
+**Who performs it:** A selected group of real users would use the feature before its full public release.
+
+**Steps:**
+
+1. Users create a group chat.
+2. They add several members.
+3. Members send and receive messages.
+4. They share images or other supported content.
+5. They test notifications and group settings.
+6. They use the feature normally for a period of time.
+
+**Expected Feedback:**
+
+* Messages not being delivered or appearing late.
+* Notification problems.
+* Difficulty adding or removing members.
+* App crashes or performance issues.
+* Confusing buttons or settings.
+* Suggestions for making group chat easier to use.
+
+**Why Beta Testing?** Real users may find practical problems that internal testers did not notice during normal testing.
 
