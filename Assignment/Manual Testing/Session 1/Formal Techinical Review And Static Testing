@@ -1,1 +1,101 @@
+## 1. Peer Review of a Sample Food Delivery SRS
+
+For this task, I referred to a publicly available **Zomato SRS-style document** that describes areas such as user functions, restaurant functions, functional requirements, and non-functional requirements. ([pdfcoffee.com][1])
+
+While reviewing it as a tester, I would point out these **unclear or ambiguous requirements**:
+
+| No. | Requirement / Statement                         | What is unclear?                                                       | Suggested improvement                                                                             |
+| --- | ----------------------------------------------- | ---------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| 1   | “Quick delivery”                                | It does not say what “quick” actually means.                           | Mention a specific target, such as delivery within **30 minutes** where applicable.               |
+| 2   | “User-friendly interface”                       | Different people may have different ideas of what user-friendly means. | Define measurable points, such as simple navigation and maximum number of steps for ordering.     |
+| 3   | “Secure payment”                                | The required security level is not mentioned.                          | Specify the expected security controls and supported payment methods.                             |
+| 4   | “Nearby restaurants”                            | The meaning of nearby is not defined.                                  | Clearly mention a distance/radius, such as restaurants within **5 km**.                           |
+| 5   | “The system should provide fast search results” | “Fast” is not measurable.                                              | Give a performance requirement, such as results appearing within **2 seconds** under normal load. |
+
+**My review comment:** The main problem is that words like *quick, nearby, user-friendly,* and *fast* sound good but are difficult for a tester to verify. A good SRS should make requirements specific and measurable. The reference SRS also includes functional and non-functional sections, which are useful areas to review for this kind of ambiguity. ([Scribd][2])
+
+---
+
+## 2. Informal Review of a Friend’s Login Test Cases
+
+Suppose my friend created test cases for a simple **Username + Password Login** feature. I would give these three suggestions:
+
+**1. Add negative test cases.**
+The test cases should not only check correct username and password. They should also cover wrong username, wrong password, blank fields, and invalid input.
+
+**2. Make the expected results more specific.**
+Instead of writing “Login should fail,” it would be better to write something like, “Login should be rejected and the message *Invalid username or password* should be displayed.”
+
+**3. Add boundary and usability checks.**
+I would include very short and maximum-length usernames/passwords, and also check whether the password is hidden and whether the Login button behaves correctly when required fields are empty.
+
+---
+
+## 3. Walkthrough – Add to Cart Test Case
+
+### Test Case
+
+**Scenario:** Verify that a user can add a product to the shopping cart.
+
+### Preconditions
+
+* User is logged in.
+* Product is available in stock.
+* Product page can be opened.
+
+### Steps I would explain to my classmate
+
+1. Open the shopping app.
+2. Search for a product, such as a phone case.
+3. Open the product details page.
+4. Check that the product is available.
+5. Click **Add to Cart**.
+6. Open the cart.
+7. Check whether the selected product is present.
+8. Check the quantity and price.
+9. Verify that the cart total is updated correctly.
+
+### Expected Result
+
+The selected product should appear in the cart with the correct quantity and price, and the cart total should be updated.
+
+### Classmate's possible feedback
+
+During the walkthrough, my classmate might ask:
+
+* “What happens if the product goes out of stock before adding it?”
+* “Should we test adding the same product twice?”
+* “What should happen if I click **Add to Cart** multiple times quickly?”
+* “Do we need to check whether the cart count changes?”
+
+### Improvements after the walkthrough
+
+Based on this feedback, I would add test cases for **out-of-stock products, duplicate items, repeated clicks, cart count updates, and quantity changes**. This makes the test case more complete and avoids leaving important behaviour undefined.
+
+---
+
+## 4. Four Issues Static Testing Can Find in a Movie Booking Test Case
+
+Static testing means reviewing the test case document **without actually running the application**. For a BookMyShow-like movie booking system, it can catch issues such as:
+
+### 1. Missing preconditions
+
+A test case might say “Select a seat” without mentioning that the user must first select a movie, theatre, date, and show.
+
+### 2. Unclear test steps
+
+A step like **“Complete the booking”** is too vague. It should clearly mention seat selection, entering required details, payment, and confirmation.
+
+### 3. Incorrect or incomplete expected results
+
+A test case may say only “Booking successful” without checking important details such as the selected seat, show time, amount, and booking ID.
+
+### 4. Missing negative scenarios
+
+The test document may only cover successful bookings and forget cases such as payment failure, seat becoming unavailable, invalid information, or cancellation.
+
+**In simple words:** static testing helps find mistakes in the test document itself before a tester spends time executing it.
+
+[1]: https://pdfcoffee.com/srs-8-pdf-free.html?utm_source=chatgpt.com "Srs - PDFCOFFEE.COM"
+[2]: https://www.scribd.com/document/603124241/432717709-Srs?utm_source=chatgpt.com "Zomato: Software Requirement Specification | PDF | Mobile App | Input/Output"
 
