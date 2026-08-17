@@ -1,0 +1,154 @@
+Sure — here are the answers in a **simple, natural, human-written style** suitable for an assignment.
+
+# 1. One-Page Test Summary Report – Food Delivery App
+
+**Application:** Zomato-style Food Delivery App
+**Feature:** New Order Tracking and Checkout Update
+**Testing Period:** 5 Days
+**Overall Status:** **Pass with Minor Issues**
+
+### Test Objectives
+
+The main objective was to check whether the new checkout and order-tracking features work correctly and whether the update has affected existing ordering functionality. I also checked important user flows such as cart, payment, order confirmation and tracking.
+
+### Test Coverage
+
+The following areas were tested:
+
+* Restaurant and food search
+* Adding and removing items from cart
+* Quantity and price calculation
+* Applying coupons
+* Selecting delivery address
+* Payment and order confirmation
+* Order status and tracking
+* Notifications after placing an order
+* Basic regression testing of existing order functionality
+
+### Major Defects Found
+
+| Defect                                                                  | Severity | Status |
+| ----------------------------------------------------------------------- | -------- | ------ |
+| Order status sometimes does not update immediately after payment        | High     | Fixed  |
+| Coupon discount is not updated immediately after changing cart quantity | Medium   | Fixed  |
+| Order tracking screen takes longer to load on slow network              | Low      | Open   |
+
+### Overall Test Status
+
+Most of the planned test cases were executed successfully. The major functional issues found during testing were fixed and retested. One minor performance issue is still open, but it does not stop users from placing an order.
+
+**Final Status: PASS WITH MINOR ISSUES**
+
+**Tester:** QA Team
+**Recommendation:** The feature can be released, but the remaining minor issue should be monitored and fixed in the next update.
+
+---
+
+# 2. Daily QA Report – 5-Day Sprint
+
+**Application:** BookMyShow-style Movie Ticket Booking App
+**Sprint Duration:** 5 Days
+
+| Day       | Test Cases Executed |  Passed | Failed | Blocked |
+| --------- | ------------------: | ------: | -----: | ------: |
+| **Day 1** |                  20 |      17 |      2 |       1 |
+| **Day 2** |                  25 |      22 |      2 |       1 |
+| **Day 3** |                  30 |      27 |      2 |       1 |
+| **Day 4** |                  28 |      25 |      2 |       1 |
+| **Day 5** |                  27 |      25 |      1 |       1 |
+| **Total** |             **130** | **116** |  **9** |   **5** |
+
+### Daily Comments
+
+* **Day 1:** Started functional testing; a few booking issues were found.
+* **Day 2:** Continued movie search, theatre and show-time testing.
+* **Day 3:** Focused on seat selection and booking flow.
+* **Day 4:** Tested payment and booking confirmation.
+* **Day 5:** Performed regression testing and retested fixed defects.
+
+**Overall:** Testing progressed well, although some cases remained blocked because of environment/payment-related issues.
+
+---
+
+# 3. Five Common QA Metrics
+
+| QA Metric                       | Definition                                                                                                      | Use in a Paytm-style Payments App                                                                                   |
+| ------------------------------- | --------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| **1. Defect Density**           | Number of defects found compared with the size of the software/module.                                          | Helps identify modules with a high number of bugs, such as the payment or recharge module.                          |
+| **2. Test Case Execution Rate** | Percentage of planned test cases that have actually been executed.                                              | Helps the QA team know how much of the planned testing has been completed before release.                           |
+| **3. Defect Leakage**           | Defects that were missed during testing but were found after release.                                           | Helps measure how effective testing was before a payment feature was released to users.                             |
+| **4. Test Coverage**            | Percentage of requirements or functionality covered by test cases.                                              | Helps ensure important features such as UPI, wallet, recharge and transaction history are properly tested.          |
+| **5. Defect Reopen Rate**       | Percentage of fixed defects that are reopened because the problem still exists or the fix caused another issue. | A high rate could indicate that developers need to investigate defects more carefully before marking them as fixed. |
+
+### Why Metrics Matter
+
+QA metrics give the team a quick idea about the **quality of the application and progress of testing**. For a payments app, this is especially important because even a small defect can affect transactions and user trust.
+
+---
+
+# 4. Calculate Test Case Execution Rate and Defect Reopen Rate
+
+### Given Data
+
+* **Planned test cases = 120**
+* **Executed test cases = 110**
+* **Passed = 95**
+* **Failed = 15**
+* **Reopened defects = 5**
+
+### A. Test Case Execution Rate
+
+**Formula:**
+
+[
+\text{Test Case Execution Rate} =
+\frac{\text{Executed}}{\text{Planned}}\times100
+]
+
+[
+= \frac{110}{120}\times100
+]
+
+[
+= 91.67%
+]
+
+**Test Case Execution Rate = 91.67%**
+
+### Interpretation
+
+Around **91.67%** of the planned test cases were executed. This is a good level of progress, but **10 test cases are still pending**, so testing is not completely finished.
+
+---
+
+### B. Defect Reopen Rate
+
+The formula given is:
+
+[
+\text{Defect Reopen Rate} =
+\frac{\text{Reopened Defects}}{\text{Total Defects Found}}\times100
+]
+
+Here, **15 failed test cases** are treated as the total defects found for this calculation.
+
+[
+= \frac{5}{15}\times100
+]
+
+[
+= 33.33%
+]
+
+**Defect Reopen Rate = 33.33%**
+
+### Interpretation
+
+A **33.33% reopen rate** is relatively high. It means that a significant portion of the defects were not completely resolved the first time. The development team may need to improve root-cause analysis and developers/testers should communicate more clearly when verifying fixes.
+
+### Final Result
+
+* **Test Case Execution Rate = 91.67%**
+* **Defect Reopen Rate = 33.33%**
+
+Overall, testing progress is good, but the high defect reopen rate suggests that **more attention is needed on the quality of bug fixes before the release**.
