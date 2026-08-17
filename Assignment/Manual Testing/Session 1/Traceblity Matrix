@@ -1,1 +1,81 @@
+# 1. Requirements for Instagram Signup Feature
+
+I have selected the **Instagram Signup** feature because it is a common feature and has simple requirements to understand.
+
+| Requirement ID | Requirement                                                                                                          |
+| -------------- | -------------------------------------------------------------------------------------------------------------------- |
+| **REQ-01**     | The user should be able to enter a valid mobile number or email address to create an account.                        |
+| **REQ-02**     | The application should send an OTP/verification code to the registered mobile number or email.                       |
+| **REQ-03**     | The user should be able to create a password that meets the required password rules.                                 |
+| **REQ-04**     | The **Sign Up** button should allow registration only when all mandatory details are entered correctly.              |
+| **REQ-05**     | After successful verification and registration, the user should be taken to their newly created account/home screen. |
+
+---
+
+# 2. Requirement-to-Test Case Mapping
+
+| Requirement ID | Requirement Description                                                    | Test Case ID | Test Case Description                                                                                           |
+| -------------- | -------------------------------------------------------------------------- | ------------ | --------------------------------------------------------------------------------------------------------------- |
+| **REQ-01**     | User can enter a valid mobile number/email.                                | **TC-01**    | Enter a valid mobile number/email and check that it is accepted.                                                |
+| **REQ-02**     | OTP should be sent for verification.                                       | **TC-02**    | Enter a valid mobile number and check whether the OTP is received.                                              |
+| **REQ-03**     | Password should follow the required rules.                                 | **TC-03**    | Enter a password that satisfies all password requirements and verify that it is accepted.                       |
+| **REQ-04**     | Signup should work only when mandatory details are valid.                  | **TC-04**    | Leave a mandatory field blank and check that signup is prevented with an appropriate message.                   |
+| **REQ-05**     | Successful registration should take the user to their account/home screen. | **TC-05**    | Complete signup with valid details and verify that the account is created and the user reaches the home screen. |
+
+---
+
+# 3. RTM with Defect IDs
+
+During testing, suppose we found **two defects**: one where the OTP is not received and another where the Signup button remains disabled even after entering valid details.
+
+| Requirement ID | Requirement Description                                          | Test Case ID | Test Case Description                                                       | Defect ID  |
+| -------------- | ---------------------------------------------------------------- | ------------ | --------------------------------------------------------------------------- | ---------- |
+| **REQ-01**     | User can enter a valid mobile number/email.                      | **TC-01**    | Enter a valid mobile number/email and check that it is accepted.            | **—**      |
+| **REQ-02**     | OTP should be sent for verification.                             | **TC-02**    | Enter a valid mobile number and check whether OTP is received.              | **DEF-01** |
+| **REQ-03**     | Password should follow required rules.                           | **TC-03**    | Enter a valid password and verify that it is accepted.                      | **—**      |
+| **REQ-04**     | Signup should work only when mandatory details are valid.        | **TC-04**    | Enter all valid mandatory details and check whether Signup becomes enabled. | **DEF-02** |
+| **REQ-05**     | Successful registration should take the user to the home screen. | **TC-05**    | Complete signup with valid details and verify successful account creation.  | **—**      |
+
+**Defects found:**
+
+* **DEF-01:** OTP is not received after entering a valid mobile number.
+* **DEF-02:** Signup button remains disabled even after all valid mandatory details are entered.
+
+---
+
+# 4. Forward and Backward Traceability
+
+**Forward traceability** means following a requirement forward to its related test case to make sure every requirement is actually tested. For example, **REQ-02 (OTP should be sent)** is linked forward to **TC-02**, which checks whether the OTP is received.
+
+**Backward traceability** means starting from a test case and tracing it back to the requirement it was created to verify. For example, **TC-04** can be traced backward to **REQ-04**, because the test checks whether Signup works only when the required details are entered correctly. This helps make sure that no test case is unrelated to a requirement.
+
+---
+
+# 5. Bi-Directional RTM – Login Feature
+
+**Application:** Zomato-like Food Delivery App
+
+| Requirement ID | Requirement                                                                 | Test Case ID | Test Case                                                           | Traceability   |
+| -------------- | --------------------------------------------------------------------------- | ------------ | ------------------------------------------------------------------- | -------------- |
+| **REQ-01**     | User should be able to log in using valid mobile number/email and password. | **TC-01**    | Login with valid credentials.                                       | REQ-01 ↔ TC-01 |
+| **REQ-01**     | User should be able to log in using valid credentials.                      | **TC-02**    | Login with an incorrect password and verify that login is rejected. | REQ-01 ↔ TC-02 |
+| **REQ-02**     | The system should not allow login when mandatory fields are blank.          | **TC-03**    | Leave mobile/email and password blank and click Login.              | REQ-02 ↔ TC-03 |
+| **REQ-02**     | The system should validate mandatory login fields.                          | **TC-04**    | Enter a valid mobile number but leave the password blank.           | REQ-02 ↔ TC-04 |
+| **REQ-03**     | After successful login, the user should be taken to the app home screen.    | **TC-05**    | Login with valid credentials and verify the home screen.            | REQ-03 ↔ TC-05 |
+
+### Bi-directional view
+
+**Forward:**
+REQ-01 → TC-01, TC-02
+REQ-02 → TC-03, TC-04
+REQ-03 → TC-05
+
+**Backward:**
+TC-01 → REQ-01
+TC-02 → REQ-01
+TC-03 → REQ-02
+TC-04 → REQ-02
+TC-05 → REQ-03
+
+This RTM makes it easy for the testing team to check that **every requirement has test coverage** and that **every test case has a valid requirement behind it**.
 
