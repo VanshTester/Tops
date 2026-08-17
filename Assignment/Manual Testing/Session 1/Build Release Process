@@ -1,0 +1,136 @@
+Sure — here are the answers in a **simple, natural, human-written style** suitable for an assignment.
+
+# 1. Release Readiness Checklist – Food Delivery App
+
+Before releasing a new version of a Zomato/Swiggy-style app, QA should check the following:
+
+* [ ] **Functional testing completed** – Main features like login, restaurant search, cart and ordering work correctly.
+* [ ] **Payment testing completed** – UPI, cards and other supported payment methods work properly.
+* [ ] **Order placement verified** – Users can successfully place an order and receive confirmation.
+* [ ] **Regression testing completed** – Existing features still work after the new changes.
+* [ ] **Critical and high-severity bugs resolved** – No major unresolved defect should block the release.
+* [ ] **Performance testing completed** – Important screens should load within an acceptable time under normal conditions.
+* [ ] **Different devices/platforms tested** – The app should work properly on supported Android/iOS versions and common screen sizes.
+* [ ] **Notifications verified** – Order confirmation and status notifications should be generated correctly.
+* [ ] **Security checks completed** – User and payment-related information should be handled safely.
+* [ ] **Final build verification** – QA should test the exact build that is planned for production.
+
+**Final decision:**
+If the important test cases pass and there are no release-blocking defects, QA can recommend the build for release.
+
+---
+
+# 2. Build Cycle vs Release Cycle
+
+Let's take **Instagram** as an example.
+
+| Point         | Build Cycle                                                                  | Release Cycle                                                                   |
+| ------------- | ---------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| **Meaning**   | Process of developing, compiling and creating a testable version of the app. | Process of preparing and delivering the approved version to real users.         |
+| **Frequency** | Builds may be created frequently during development.                         | Releases usually happen after sufficient testing and approval.                  |
+| **QA Role**   | QA tests new builds, reports bugs and performs regression testing.           | QA performs final validation and checks release readiness.                      |
+| **Example**   | Developers create a new build containing an updated Reels feature.           | After testing and approval, the updated Instagram version is released to users. |
+
+### QA Involvement
+
+**During the Build Cycle:**
+
+1. QA receives the new build.
+2. Performs smoke testing to check whether it is stable.
+3. Tests the newly developed features.
+4. Reports bugs to developers.
+5. Retests fixes and performs regression testing.
+
+**During the Release Cycle:**
+
+1. QA verifies the final release candidate.
+2. Checks that critical bugs are resolved.
+3. Performs final regression and compatibility testing.
+4. Verifies important performance and usability areas.
+5. Gives a final **Go/No-Go recommendation** to the release team.
+
+**In simple words:**
+The **build cycle is about creating and testing versions**, while the **release cycle is about making sure the approved version is ready to reach users**.
+
+---
+
+# 3. QA Tasks Before Releasing a Movie Booking Feature
+
+**Feature:** New movie booking feature in a BookMyShow-style app.
+
+### 1. Test the complete booking flow
+
+QA should test movie search, theatre selection, show-time selection, seat selection, booking and confirmation.
+
+**Expected:** The user should be able to complete a booking without errors.
+
+### 2. Test different payment methods
+
+Test supported payment options such as UPI, cards and other available methods.
+
+**Expected:** Payment should work correctly and the booking should be confirmed only after successful payment.
+
+### 3. Perform regression testing
+
+Check existing features such as movie search, booking history, cancellation and notifications.
+
+**Expected:** The new feature should not break existing functionality.
+
+### 4. Perform performance testing
+
+Check how the feature behaves when many users try to book tickets at the same time, especially for a popular movie.
+
+**Expected:** The application should remain stable and respond within an acceptable time.
+
+### 5. Perform compatibility and usability testing
+
+Test the feature on supported mobile devices, browsers and operating systems. Also check whether buttons, seat selection and payment information are easy to understand.
+
+**Expected:** The feature should work consistently and be easy for users to navigate.
+
+---
+
+# 4. Critical Payment Bug Found Just Before Release
+
+**Situation:** A critical bug is found in the payment gateway of a Flipkart-like shopping app.
+
+### Steps QA Should Follow
+
+**1. Reproduce the bug**
+
+QA should reproduce the issue several times to confirm that it is a genuine and consistent problem.
+
+**2. Create a detailed bug report**
+
+The report should include:
+
+* Clear bug title
+* Steps to reproduce
+* Expected result
+* Actual result
+* Environment/build number
+* Screenshots or logs if useful
+* **Severity: Critical**
+* **Priority: High**
+
+**3. Inform the development and release teams**
+
+Since the issue affects payment, QA should immediately inform the developer, Test Lead, Product Owner and release manager instead of waiting for the normal bug-reporting process.
+
+**4. Assess the impact**
+
+The team should determine whether the bug can cause failed payments, incorrect transactions, duplicate charges, or users being unable to complete purchases.
+
+**5. Wait for the fix and retest**
+
+After the developer provides a fix, QA should test the exact scenario again and perform regression testing around the payment and checkout flow.
+
+**6. Make the release recommendation**
+
+If the critical payment issue is still present, QA should recommend **No-Go / postpone the release**.
+
+If the issue is completely fixed, retested and no related critical problems are found, QA can recommend **Go**, subject to the team's final release decision.
+
+### Final Conclusion
+
+A critical payment bug should **not simply be ignored to meet the release date**. QA's role is to provide clear evidence about the risk so that the team can make an informed **Go/No-Go decision**.
