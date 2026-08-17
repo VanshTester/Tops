@@ -1,0 +1,209 @@
+Sure — I’ll use **Zomato** as the selected app and keep everything in a **simple, natural, human-written assignment style**.
+
+# 1. App Summary and Business Requirements
+
+**App Selected: Zomato**
+
+Zomato is a food delivery and restaurant discovery app. Users can search for nearby restaurants, view menus, add food items to a cart, place orders, make payments and track their orders. Users can also rate restaurants and provide reviews.
+
+### Main Features
+
+* User registration and login
+* Restaurant and food search
+* Restaurant menu and item selection
+* Add to cart
+* Apply coupons/offers
+* Online payment
+* Order confirmation and tracking
+* Ratings and reviews
+
+### Business Requirements
+
+From a business point of view, Zomato should:
+
+1. Allow users to easily find restaurants and food items.
+2. Allow customers to place orders and make secure payments.
+3. Provide accurate order status and delivery tracking.
+4. Help restaurants receive and manage customer orders.
+5. Provide offers and discounts to attract more customers.
+6. Maintain customer trust through reliable service and secure transactions.
+
+---
+
+# 2. Test Plan – Zomato
+
+**Test Plan Name:** Zomato Manual Testing Plan
+
+**Features Selected:** Login, Restaurant Search, Food Ordering
+
+### Testing Objectives
+
+The main objective is to verify that users can successfully log in, search for restaurants and place a food order without encountering major problems.
+
+### Scope
+
+**In Scope:**
+
+* Login/logout
+* Restaurant and food search
+* Restaurant selection
+* Adding food to cart
+* Order placement
+* Basic payment verification
+* Order confirmation
+
+**Out of Scope:**
+
+* Backend/database testing
+* Source-code testing
+* Actual delivery operations
+* Third-party payment gateway internal testing
+
+### Resources Needed
+
+* Manual QA tester
+* Android/iOS device or emulator
+* Web browser, if web testing is included
+* Stable internet connection
+* Test user accounts
+* Test payment method/test environment
+* Different restaurant and food test data
+
+### Rough Timeline
+
+| Day       | Testing Activity                                   |
+| --------- | -------------------------------------------------- |
+| **Day 1** | Login and account-related testing                  |
+| **Day 2** | Restaurant and food search testing                 |
+| **Day 3** | Cart and order placement testing                   |
+| **Day 4** | Payment and order confirmation testing             |
+| **Day 5** | Regression testing, bug retesting and final report |
+
+**Test Approach:** Manual functional testing, negative testing, usability testing and regression testing.
+
+---
+
+# 3. Test Scenarios and Detailed Test Cases
+
+**Core Feature Selected:** Placing a Food Order
+
+## A. Five Test Scenarios
+
+1. Verify that a logged-in user can select a restaurant and place an order successfully.
+2. Verify that food items can be added, removed and their quantity can be changed in the cart.
+3. Verify that the correct total amount is displayed before placing the order.
+4. Verify that payment failure is handled properly without creating an incorrect order.
+5. Verify that a successful order receives the correct confirmation and order status.
+
+---
+
+## B. Eight Detailed Test Cases
+
+| TC ID    | Test Case                 | Steps                                                                           | Test Data                        | Expected Result                                                                       |
+| -------- | ------------------------- | ------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------------------------------------------- |
+| **TC01** | Add food item to cart     | 1. Login 2. Open restaurant 3. Select food item 4. Tap Add                      | Burger – ₹200                    | Item should be added to cart with correct price.                                      |
+| **TC02** | Increase item quantity    | 1. Open cart 2. Increase quantity from 1 to 2                                   | Burger × 2                       | Quantity and total price should update correctly.                                     |
+| **TC03** | Remove item from cart     | 1. Open cart 2. Select Remove                                                   | Burger                           | Item should be removed and total should be updated.                                   |
+| **TC04** | Verify cart total         | 1. Add two different food items 2. Open cart                                    | Pizza ₹300 + Coke ₹50            | Total should correctly show ₹350 plus applicable charges.                             |
+| **TC05** | Apply valid coupon        | 1. Add items 2. Open coupon section 3. Enter valid coupon                       | Valid test coupon                | Coupon should be accepted and discount should be applied correctly.                   |
+| **TC06** | Try invalid coupon        | 1. Open coupon section 2. Enter invalid code 3. Apply                           | `TEST12345`                      | Coupon should be rejected with a clear error message.                                 |
+| **TC07** | Successful payment        | 1. Add food 2. Proceed to checkout 3. Select payment method 4. Complete payment | Valid test payment details       | Payment should succeed and order should be created.                                   |
+| **TC08** | Verify order confirmation | 1. Complete successful order 2. Open order section                              | Order ID generated after payment | Order confirmation should display correct restaurant, items, amount and order status. |
+
+---
+
+# 4. Requirement Traceability Matrix (RTM)
+
+| Requirement ID | Requirement Description                                                                   | Test Case IDs          |
+| -------------- | ----------------------------------------------------------------------------------------- | ---------------------- |
+| **REQ-01**     | User should be able to add and manage food items in the cart.                             | TC01, TC02, TC03, TC04 |
+| **REQ-02**     | User should be able to apply a valid coupon and the system should reject invalid coupons. | TC05, TC06             |
+| **REQ-03**     | User should be able to complete payment and receive an order confirmation.                | TC07, TC08             |
+
+### RTM Purpose
+
+The RTM helps make sure that every important requirement has at least one test case. It also makes it easier to check whether any requirement has been missed during testing.
+
+---
+
+# 5. Defect Reports and Final Test Report
+
+## Defect 1
+
+**Defect ID:** BUG-001
+**Title:** Cart total does not update after increasing food quantity
+**Severity:** Medium
+**Priority:** High
+
+### Steps to Reproduce
+
+1. Login to the application.
+2. Open any restaurant.
+3. Add a food item costing ₹200 to the cart.
+4. Open the cart.
+5. Increase the quantity from 1 to 2.
+
+**Expected Result:**
+The cart total should change from ₹200 to ₹400, excluding any applicable additional charges.
+
+**Actual Result:**
+The quantity changes to 2, but the cart continues to display ₹200 until the page is refreshed.
+
+**Impact:**
+The user may see an incorrect order amount and may lose confidence in the application.
+
+---
+
+## Defect 2
+
+**Defect ID:** BUG-002
+**Title:** Invalid coupon shows incorrect success message
+**Severity:** High
+**Priority:** High
+
+### Steps to Reproduce
+
+1. Login to the application.
+2. Add food items worth ₹500 to the cart.
+3. Open the coupon section.
+4. Enter an invalid coupon code.
+5. Tap **Apply**.
+
+**Expected Result:**
+The coupon should be rejected and a clear invalid-coupon message should be displayed.
+
+**Actual Result:**
+The application shows a success message, but no valid discount is applied.
+
+**Impact:**
+The message can confuse users and may cause incorrect expectations about the final order amount.
+
+---
+
+# Final Test Report
+
+**Application:** Zomato
+**Feature Tested:** Food Ordering
+**Testing Type:** Manual Functional Testing
+**Testing Duration:** 5 Days
+
+### Testing Summary
+
+During testing, I checked the complete food-ordering flow, starting from adding food to the cart and ending with payment and order confirmation. I also tested valid and invalid coupon scenarios and checked cart calculations.
+
+### Results
+
+* **Total Test Cases:** 8
+* **Test Cases Executed:** 8
+* **Passed:** 6
+* **Failed:** 2
+* **Blocked:** 0
+* **Defects Found:** 2
+* **High Severity Defects:** 1
+* **Medium Severity Defects:** 1
+
+### Overall Status
+
+**Testing Status: PASS WITH MINOR ISSUES**
+
+Most of the core functionality worked as expected. However, the two reported defects should be fixed and retested before considering the feature completely ready for release.
