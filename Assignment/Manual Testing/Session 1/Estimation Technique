@@ -1,1 +1,100 @@
+# 1. WBS for “Search Restaurants” Feature – Zomato-like App
+
+I selected the **Search Restaurants** feature. A simple Work Breakdown Structure for testing it would look like this:
+
+| WBS No.  | Testing Activity / Sub-task | What will be done?                                                                      |
+| -------- | --------------------------- | --------------------------------------------------------------------------------------- |
+| **1.0**  | Requirement Study           | Understand how restaurant search is supposed to work.                                   |
+| **1.1**  | Test Scenario Preparation   | Identify different search scenarios such as valid, invalid, blank and partial searches. |
+| **1.2**  | Test Case Design            | Write detailed test cases with test data and expected results.                          |
+| **1.3**  | Test Data Preparation       | Prepare restaurant names, cuisines, keywords and invalid search terms.                  |
+| **1.4**  | Test Environment Setup      | Prepare the app, devices, internet connection and required test accounts.               |
+| **1.5**  | Functional Testing          | Check whether search gives the correct restaurants and filters.                         |
+| **1.6**  | UI/Usability Testing        | Check search box, filters, buttons and results display.                                 |
+| **1.7**  | Performance Testing         | Check how quickly search results appear.                                                |
+| **1.8**  | Defect Reporting            | Report any incorrect results, crashes or UI issues.                                     |
+| **1.9**  | Retesting & Regression      | Retest fixed bugs and make sure existing search functions still work.                   |
+| **1.10** | Test Closure                | Prepare the final test result and close the testing activity.                           |
+
+This WBS divides one large testing task into smaller activities, so it becomes easier to assign work and track progress.
+
+---
+
+# 2. Test Effort Estimation – WhatsApp “Send Message”
+
+For a normal-sized messaging feature, I would estimate the testing effort like this:
+
+| Test Activity                   | Estimated Hours |
+| ------------------------------- | --------------: |
+| Requirement understanding       |         2 hours |
+| Test scenario preparation       |         2 hours |
+| Test case design and review     |         5 hours |
+| Test data preparation           |         2 hours |
+| Test environment/device setup   |         2 hours |
+| Functional test execution       |         6 hours |
+| Compatibility testing           |         3 hours |
+| Defect reporting and discussion |         2 hours |
+| Retesting fixed defects         |         3 hours |
+| Regression testing              |         3 hours |
+| Test summary and documentation  |          1 hour |
+| **Total Estimated Effort**      |    **31 hours** |
+
+### Calculation
+
+**Total effort = 2 + 2 + 5 + 2 + 2 + 6 + 3 + 2 + 3 + 3 + 1 = 31 hours**
+
+So, I would estimate around **31 person-hours** for testing the Send Message feature.
+
+---
+
+# 3. Estimation Sheet – Flipkart “Apply Coupon” Feature
+
+Since Apply Coupon is a relatively small module, I would keep the estimate smaller.
+
+| Test Activity             | Estimated Hours | Assumption                                                       |
+| ------------------------- | --------------: | ---------------------------------------------------------------- |
+| Requirement analysis      |             1.5 | Requirements are already available and understandable.           |
+| Test scenario creation    |             1.5 | Basic coupon scenarios are covered.                              |
+| Test case preparation     |               3 | Around 15–20 test cases are expected.                            |
+| Test data preparation     |             1.5 | Valid, expired, invalid and minimum-order coupons are available. |
+| Environment setup         |               1 | Existing test environment can be reused.                         |
+| Functional test execution |               4 | Testing is mainly manual.                                        |
+| Integration testing       |               2 | Coupon system interacts with cart/order calculation.             |
+| Defect reporting          |               1 | Assumes only a few defects are found.                            |
+| Retesting                 |               2 | Fixes will be available during the testing period.               |
+| Regression testing        |               2 | Check cart total and checkout after coupon changes.              |
+| Final report              |               1 | Basic test summary is required.                                  |
+| **Total**                 |  **20.5 hours** |                                                                  |
+
+### Assumptions
+
+* The coupon feature has already been developed and is available for testing.
+* The test environment and test accounts are ready.
+* No major changes to requirements are expected.
+* The third-party coupon service, if any, is available during testing.
+* The estimate is for one tester.
+
+**Estimated effort = 20.5 person-hours.**
+
+---
+
+# 4. Test Point Analysis (TPA) – Movie Booking Feature
+
+**Test Point Analysis (TPA)** is a technique used to estimate testing effort by looking at the size and complexity of the software from a testing point of view. Instead of simply guessing how many hours testing might take, we identify things such as inputs, outputs, user interactions, interfaces and complexity, and use them to estimate the overall testing size.
+
+For a new **Movie Booking** feature in BookMyShow, I would consider activities such as movie search, theatre selection, show selection, seat selection, customer details, payment and booking confirmation. Each of these adds to the amount of testing work. A more complex feature with more screens and external integrations would generally require more test effort.
+
+### Advantages
+
+**1. More systematic estimation:**
+TPA gives a structured way to estimate testing effort instead of making a random guess.
+
+**2. Useful for comparing projects:**
+It can help the team compare the expected testing effort of a small movie-search feature with a larger end-to-end booking feature.
+
+### Limitation
+
+**TPA can be difficult when requirements are still unclear.** If the size or complexity of the new Movie Booking feature keeps changing, the initial effort estimate may also become inaccurate.
+
+**In simple words:** TPA helps the test team understand **how big and complex the testing work is likely to be before deciding how much time and manpower will be needed.**
 
