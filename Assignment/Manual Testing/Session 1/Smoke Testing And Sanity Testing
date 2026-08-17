@@ -1,0 +1,60 @@
+## 1. Smoke Test Checklist – Food Delivery App
+
+**App:** Zomato-style food delivery app
+**Purpose:** Quickly check whether the important features are working after a new build.
+
+| No. | Smoke Test Case                                              | Expected Result                           |
+| --- | ------------------------------------------------------------ | ----------------------------------------- |
+| 1   | Enter valid login details and tap **Login**.                 | User should log in successfully.          |
+| 2   | Enter invalid login details.                                 | Proper error message should be displayed. |
+| 3   | After login, open the **Dashboard/Home Page**.               | Dashboard should load without crashing.   |
+| 4   | Search for a restaurant or food item from the dashboard.     | Relevant results should be displayed.     |
+| 5   | Select a restaurant from the results.                        | Restaurant page should open correctly.    |
+| 6   | Check the main dashboard sections such as offers/categories. | Important sections should load properly.  |
+
+**Conclusion:**
+These tests are quick checks to decide whether the new build is stable enough for detailed testing.
+
+---
+
+## 2. Sanity Test Scenario – Flipkart Add to Cart
+
+**Scenario:** A bug was recently fixed where a selected product was not being added to the cart correctly.
+
+**Test Steps:**
+
+1. Open the shopping app and select any available product.
+2. Click **Add to Cart**.
+3. Open the cart.
+4. Check whether the selected product is present with the correct quantity.
+
+**Expected Result:**
+The selected product should be added to the cart successfully and should appear correctly in the cart.
+
+**Conclusion:**
+This is a **sanity test** because I am only checking the specific Add to Cart issue that was fixed. I would not test unrelated features such as payment, wishlist, or order tracking.
+
+---
+
+## 3. Smoke Testing vs Sanity Testing
+
+| Point                   | Smoke Testing                                                                  | Sanity Testing                                                                            |
+| ----------------------- | ------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------- |
+| **Purpose**             | Checks whether the major functions of a new build work.                        | Checks whether a specific change or bug fix works correctly.                              |
+| **Scope**               | Broad but shallow.                                                             | Narrow but more focused.                                                                  |
+| **When performed**      | Usually after receiving a new build.                                           | Usually after a minor change or bug fix.                                                  |
+| **Example – Instagram** | Check login, home feed, profile and basic post loading after a new build.      | If a bug in uploading posts is fixed, test only the post-upload issue.                    |
+| **Example – Paytm**     | Check login, balance display, recharge and basic navigation after a new build. | If a recharge calculation bug is fixed, mainly verify the corrected recharge calculation. |
+| **Main Goal**           | Decide whether the build is stable enough for further testing.                 | Decide whether the particular change/fix is working properly.                             |
+
+**Easy way to remember:**
+**Smoke = “Is the build basically working?”**
+**Sanity = “Did this particular fix/change work?”**
+
+---
+
+## 4. Spotify Crash After Major Update
+
+**Smoke testing should be performed first.**
+
+Since the app is crashing on startup after a major update, the basic functionality of the build is already affected. Smoke testing can quickly determine whether the new build is stable enough for further detailed testing. If the app cannot even start, detailed sanity testing would not be useful yet.
