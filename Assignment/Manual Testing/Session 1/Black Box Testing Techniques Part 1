@@ -1,0 +1,121 @@
+# 1. Equivalence Partitioning (EP) – Phone Number Field
+
+**Requirement:** The phone number must contain exactly **10 digits**. Letters and special characters are not allowed.
+
+Using EP, we divide the input into valid and invalid groups.
+
+| Partition     | Input Condition             | Example       | Expected Result |
+| ------------- | --------------------------- | ------------- | --------------- |
+| **Valid**     | Exactly 10 digits           | `9876543210`  | Accepted        |
+| **Invalid 1** | Less than 10 digits         | `987654321`   | Rejected        |
+| **Invalid 2** | More than 10 digits         | `98765432101` | Rejected        |
+| **Invalid 3** | Contains letters            | `98765AB210`  | Rejected        |
+| **Invalid 4** | Contains special characters | `98765@3210`  | Rejected        |
+| **Invalid 5** | Blank input                 | Empty         | Rejected        |
+
+So, instead of testing every possible phone number, we test one or more representative values from each partition.
+
+---
+
+# 2. Boundary Value Analysis (BVA) – Password Field
+
+**Requirement:** Password length must be between **8 and 16 characters**.
+
+For BVA, we mainly check values around the boundaries.
+
+| Test Case  | Password Length | Example               | Expected Result |
+| ---------- | --------------: | --------------------- | --------------- |
+| **TC-P01** |               7 | `Abc1234`             | ❌ Rejected      |
+| **TC-P02** |               8 | `Abc12345`            | ✅ Accepted      |
+| **TC-P03** |               9 | `Abc123456`           | ✅ Accepted      |
+| **TC-P04** |              15 | 15-character password | ✅ Accepted      |
+| **TC-P05** |              16 | 16-character password | ✅ Accepted      |
+| **TC-P06** |              17 | 17-character password | ❌ Rejected      |
+
+**Conclusion:** The accepted boundary is **8–16 characters**. Values 7 and 17 should be rejected.
+
+---
+
+# 3. Equivalence Partitioning – Instagram Caption
+
+**Requirement:** Caption can contain a maximum of **2200 characters**.
+
+We can divide the input into these partitions:
+
+| Partition |           Character Range | Valid/Invalid |
+| --------- | ------------------------: | ------------- |
+| **P1**    |              0 characters | Valid         |
+| **P2**    |         1–2200 characters | Valid         |
+| **P3**    | More than 2200 characters | Invalid       |
+
+### Test Cases
+
+| Test Case ID | Partition               | Test Data       | Expected Result                                                        |
+| ------------ | ----------------------- | --------------- | ---------------------------------------------------------------------- |
+| **TC-C01**   | P1 – Empty              | 0 characters    | Caption should be accepted if captions are optional.                   |
+| **TC-C02**   | P2 – Normal             | 50 characters   | Caption should be accepted.                                            |
+| **TC-C03**   | P2 – Near maximum       | 2200 characters | Caption should be accepted.                                            |
+| **TC-C04**   | P3 – Over limit         | 2201 characters | Caption should be rejected or extra characters should not be accepted. |
+| **TC-C05**   | P3 – Clearly over limit | 2500 characters | Caption should be rejected or restricted to the allowed limit.         |
+| **TC-C06**   | P3 – Large input        | 3000 characters | Application should handle it properly without crashing.                |
+| **TC-C07**   | P2 – Small input        | 1 character     | Caption should be accepted.                                            |
+| **TC-C08**   | P2 – Medium input       | 1000 characters | Caption should be accepted.                                            |
+| **TC-C09**   | P2 – Maximum            | 2199 characters | Caption should be accepted.                                            |
+
+So the important EP idea is that **0–2200 is the valid class**, while **anything above 2200 is an invalid class**.
+
+---
+
+# 4. BVA – Number of Tickets in BookMyShow
+
+**Requirement:** Number of tickets allowed = **1 to 10**.
+
+The important boundary values are around **1 and 10**.
+
+| Test Case ID | Number of Tickets | Expected Result |
+| ------------ | ----------------: | --------------- |
+| **TC-T01**   |                 0 | ❌ Rejected      |
+| **TC-T02**   |                 1 | ✅ Accepted      |
+| **TC-T03**   |                 2 | ✅ Accepted      |
+| **TC-T04**   |                 9 | ✅ Accepted      |
+| **TC-T05**   |                10 | ✅ Accepted      |
+| **TC-T06**   |                11 | ❌ Rejected      |
+
+### Explanation
+
+The valid range is **1–10**. Therefore, the values just outside the range (**0 and 11**) should fail, while the boundary values (**1 and 10**) should work correctly.
+
+---
+
+# 5. EP + BVA – Paytm Amount Field
+
+I selected the **recharge amount** field in a Paytm-style app.
+
+**Assumption:** For this example, the allowed recharge amount is **₹10 to ₹5,000**.
+
+## A. Equivalence Partitioning
+
+| Partition              |         Amount Range | Example | Expected Result |
+| ---------------------- | -------------------: | ------: | --------------- |
+| **P1 – Below range**   |        Less than ₹10 |      ₹5 | ❌ Rejected      |
+| **P2 – Valid range**   |           ₹10–₹5,000 |    ₹500 | ✅ Accepted      |
+| **P3 – Above range**   |     More than ₹5,000 |  ₹6,000 | ❌ Rejected      |
+| **P4 – Invalid input** | Letters/special text |   `ABC` | ❌ Rejected      |
+| **P5 – Blank**         |            No amount |   Empty | ❌ Rejected      |
+
+## B. Boundary Value Analysis
+
+| Test Case ID | Amount | Expected Result |
+| ------------ | -----: | --------------- |
+| **TC-A01**   |     ₹9 | ❌ Rejected      |
+| **TC-A02**   |    ₹10 | ✅ Accepted      |
+| **TC-A03**   |    ₹11 | ✅ Accepted      |
+| **TC-A04**   | ₹4,999 | ✅ Accepted      |
+| **TC-A05**   | ₹5,000 | ✅ Accepted      |
+| **TC-A06**   | ₹5,001 | ❌ Rejected      |
+
+### Why use both EP and BVA?
+
+**Equivalence Partitioning** helps divide the possible input values into groups, so we do not have to test every amount. **Boundary Value Analysis** focuses specifically on the values at and around the limits, where mistakes commonly occur.
+
+**In simple words:** EP checks the different **categories of input**, while BVA checks the **edges of those categories**.
