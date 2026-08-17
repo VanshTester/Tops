@@ -1,1 +1,172 @@
+# 1. Detailed Test Plan – Instagram Login Feature
+
+**Project:** Instagram-like Social Media App
+**Module:** Login
+**Document Type:** Test Plan
+
+### 1. Objective
+
+The main objective is to verify that users can log in successfully using valid credentials and that the application handles incorrect, missing, or invalid login details properly. The testing will also check the security, usability, and compatibility of the Login feature.
+
+### 2. Scope
+
+**In Scope:**
+
+* Login using registered email/username and password.
+* Valid and invalid login credentials.
+* Blank username and password fields.
+* Incorrect password and username.
+* Forgot password functionality.
+* Login error messages.
+* Password visibility option.
+* Account lockout or security checks after repeated failed attempts.
+* Login on different browsers and mobile devices.
+
+**Out of Scope:**
+
+* Instagram post uploading.
+* Stories and reels.
+* Direct messaging.
+* Profile editing.
+* Other features not related to Login.
+
+### 3. Test Items
+
+The main items that will be tested are:
+
+* Login page/UI
+* Username/email field
+* Password field
+* Login button
+* Forgot password option
+* Error messages
+* Authentication process
+* Session after successful login
+
+### 4. Features to be Tested
+
+* Successful login with valid credentials.
+* Login failure with incorrect credentials.
+* Validation of blank fields.
+* Password field behavior.
+* Forgot password functionality.
+* Error message accuracy.
+* Session creation after successful login.
+* Compatibility across supported devices and browsers.
+
+### 5. Features Not to be Tested
+
+* Posting photos/videos.
+* Commenting and liking posts.
+* Messaging.
+* Search functionality.
+* Notifications.
+* Profile and account customization.
+
+### 6. Test Deliverables
+
+The following documents/results will be prepared:
+
+* Test plan
+* Test scenarios and test cases
+* Test data
+* Defect reports
+* Test execution results
+* Test summary report
+
+### 7. Schedule
+
+| Activity                         | Time    |
+| -------------------------------- | ------- |
+| Requirement analysis             | Day 1   |
+| Test case preparation            | Day 2   |
+| Test environment setup           | Day 3   |
+| Test execution                   | Day 4–5 |
+| Retesting and regression testing | Day 6   |
+| Test report and closure          | Day 7   |
+
+### 8. Responsible Roles
+
+| Role              | Responsibility                                     |
+| ----------------- | -------------------------------------------------- |
+| **Tester**        | Prepare and execute test cases and report defects. |
+| **Test Lead**     | Plan testing, monitor progress and review results. |
+| **Developer**     | Fix defects found during testing.                  |
+| **Product Owner** | Clarify requirements and approve the final result. |
+
+**Expected outcome:** The Login feature should be stable, secure, and easy for users to use before release.
+
+---
+
+# 2. Mini Test Strategy – Movie Search Functionality
+
+**Application:** BookMyShow-like movie ticket booking app
+**Feature:** Movie Search
+
+### Testing Approach
+
+The search functionality will be tested at different levels so that both individual components and the complete user flow are checked.
+
+| Test Level              | Approach                                                                            | Tool/Example |
+| ----------------------- | ----------------------------------------------------------------------------------- | ------------ |
+| **Unit Testing**        | Test individual search functions such as keyword validation and filtering.          | **JUnit**    |
+| **Integration Testing** | Check whether the search module correctly communicates with the movie database/API. | **Postman**  |
+| **System Testing**      | Test the complete search process from entering a movie name to displaying results.  | **Selenium** |
+
+### Test Types
+
+**Functional Testing**
+
+* Search using a correct movie name.
+* Search using partial movie names.
+* Search with different spellings.
+* Check filters such as language, genre and location.
+* Check the result when no movie is found.
+
+**Non-Functional Testing**
+
+* **Performance:** Search results should appear within an acceptable time. Tool: **JMeter**.
+* **Compatibility:** Search should work on different browsers and devices. Tool: **BrowserStack**.
+* **Usability:** Check whether the search box and filters are easy to understand.
+
+### Overall Strategy
+
+First, individual search functions will be tested using unit testing. Then the connection between the search module and backend/database will be checked through integration testing. Finally, system testing will verify the complete search experience from the user's point of view.
+
+---
+
+# 3. Test Plan vs Test Strategy
+
+| Difference     | Test Plan                                                                                       | Test Strategy                                                                                                 |
+| -------------- | ----------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
+| **1. Purpose** | Explains **what, when, who and how much** testing will be done for a particular project.        | Explains the overall **approach and methods** that will be followed for testing.                              |
+| **2. Scope**   | Usually specific to a project or feature. For example, a test plan for a Zomato payment module. | Usually gives a broader testing approach, such as using automation, manual testing and different test levels. |
+| **3. Changes** | Can change frequently depending on project requirements and schedule.                           | Generally remains more stable and is used as a general guideline for testing.                                 |
+
+**Example:** For an e-commerce app, the **test plan** may say that the shopping cart will be tested from Monday to Wednesday by two testers. The **test strategy** may state that functional testing will be manual while regression testing will be automated.
+
+---
+
+# 4. Risks, Assumptions and Dependencies – Payment Testing
+
+### Risks
+
+1. **Payment Gateway Failure:** The third-party payment gateway may be unavailable, causing transactions to fail during testing.
+2. **Duplicate Payment:** A technical issue could cause the customer to be charged more than once for a single order.
+
+### Assumptions
+
+1. Test accounts and valid test payment data will be available before testing starts.
+2. The payment gateway will provide a stable test/sandbox environment for the QA team.
+
+### Dependencies
+
+1. **Payment Gateway:** Testing depends on the third-party payment service being available and properly connected.
+2. **Order Management System:** Payment testing depends on the order module correctly creating and updating orders after payment.
+
+---
+
+# 5. Updating the Test Plan – Third-Party Coupon Dependency
+
+If a third-party coupon system is introduced while testing the **Add to Cart** feature, I would update the test plan to include the new dependency and the additional scenarios related to coupons. The scope would be expanded to cover applying valid, invalid, expired and already-used coupons and checking whether the cart total is calculated correctly. The schedule may also need to be extended because the team will have to test the interaction between the cart and coupon system. I would also update the test deliverables by adding new test cases, defect reports and integration test results. The responsible roles would be informed about the change so that everyone knows about the new dependency.
 
