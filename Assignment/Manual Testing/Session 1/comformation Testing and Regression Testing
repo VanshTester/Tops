@@ -1,0 +1,88 @@
+Here are the answers in a **simple, natural, human-written style**, suitable for an assignment.
+
+# 1. Re-testing After a Bug Fix – Flipkart Add to Cart
+
+**Feature selected:** Flipkart Add to Cart
+
+After a bug in the Add to Cart feature is fixed, I would re-test the same area to make sure the reported problem is actually solved.
+
+| Test Case | Test Steps                                                                  | Expected Result                                                                             |
+| --------- | --------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| TC01      | Open a product, select the required size/variant and click **Add to Cart**. | The product should be added to the cart successfully.                                       |
+| TC02      | Add the same product to the cart again.                                     | The cart should handle the duplicate product correctly without creating an incorrect entry. |
+| TC03      | Add a product and open the cart from the cart icon.                         | The correct product, quantity and price should be displayed in the cart.                    |
+
+**Conclusion:**
+These test cases directly check the Add to Cart functionality that could have been affected by the bug fix.
+
+---
+
+# 2. Re-testing Checklist – Swiggy Apply Coupon
+
+After fixing a coupon-validation bug, I would use the following checklist:
+
+* [ ] **Check a valid coupon:** Enter a valid coupon that satisfies all conditions and verify that the discount is applied correctly.
+* [ ] **Check an expired coupon:** Apply an expired coupon and verify that it is rejected with a clear message.
+* [ ] **Check minimum order condition:** Try applying a coupon when the cart value is below the required minimum amount. It should not be accepted.
+* [ ] **Check an invalid coupon:** Enter a random or incorrect coupon code and verify that the system rejects it properly.
+* [ ] **Check coupon removal:** Apply a valid coupon and then remove it. The discount should disappear and the total should return to the correct amount.
+* [ ] **Check final total:** After applying a valid coupon, verify that the discount and final payable amount are calculated correctly.
+
+**Result:**
+If all these checks pass, I can be more confident that the coupon-validation bug has been fixed.
+
+---
+
+# 3. Regression Test Suite – Music App Search
+
+**Module:** Search feature of a music streaming app such as Spotify
+
+Whenever the search functionality is updated, I would run these regression tests to make sure existing features still work.
+
+| Test Case | Test                                           | Expected Result                                                              |
+| --------- | ---------------------------------------------- | ---------------------------------------------------------------------------- |
+| TC01      | Search for an exact song name.                 | The correct song should appear in the results.                               |
+| TC02      | Search for an artist name.                     | Songs/albums related to that artist should be displayed.                     |
+| TC03      | Search using partial words.                    | Relevant search suggestions/results should appear.                           |
+| TC04      | Search with incorrect spelling.                | The app should provide useful results or suggestions instead of crashing.    |
+| TC05      | Select a song from search results and play it. | The selected song should start playing correctly.                            |
+| TC06      | Clear the search and perform another search.   | The previous search results should be removed and new results should appear. |
+| TC07      | Search while using filters/categories.         | The selected filter should work correctly with the search results.           |
+
+**Conclusion:**
+This regression suite checks both the search function and the features connected to it, such as playing a song and using filters.
+
+---
+
+# 4. Importance of Regression Testing in Agile
+
+Regression testing is very important in Agile because the software is updated frequently. In every sprint, developers may add new features or change existing code. A new change can accidentally affect a feature that was already working properly.
+
+Regression testing helps make sure that **new changes have not broken old functionality**.
+
+### Example 1 – Instagram
+
+Suppose Instagram releases an update to the **Reels** feature. If regression testing is skipped, the update could accidentally affect photo uploading. Users might then face problems while uploading normal posts.
+
+### Example 2 – Zomato
+
+Suppose Zomato changes its **payment or checkout system**. Without regression testing, the change could accidentally affect the restaurant cart or order placement. A user might select food successfully but be unable to complete the order.
+
+**In short:**
+Regression testing is important in Agile because frequent changes mean there is a higher chance of affecting existing features. It helps maintain the overall stability of the application after every sprint.
+
+---
+
+# 5. Regression Testing After a Payment Module Update – BookMyShow
+
+Suppose the payment module has received a major update. I would test other connected modules because payment is linked with the booking process.
+
+| Module              | Regression Test                                                                    | Expected Result                                                                              |
+| ------------------- | ---------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| **Seat Selection**  | Select seats, proceed to payment, and return after a successful booking.           | The selected seats should be correctly reserved and should not become incorrectly available. |
+| **Booking History** | Complete a booking and then open the Booking History section.                      | The new booking should appear with the correct movie, theatre, seats and booking status.     |
+| **Notifications**   | Complete a successful booking and check for the booking confirmation notification. | The user should receive the correct confirmation with accurate booking details.              |
+
+### Final Conclusion
+
+Even though the change was made to the payment module, other modules can be affected because they are connected to the payment process. Running regression tests on **seat selection, booking history, and notifications** helps make sure the complete booking flow still works properly after the update.
