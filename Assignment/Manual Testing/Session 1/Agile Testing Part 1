@@ -1,0 +1,143 @@
+Sure — below are **simple, natural, human-written answers** suitable for an assignment.
+
+# 1. Agile vs Waterfall – Comparison for Software Testing
+
+| Factor                 | Agile Model                                                            | Waterfall Model                                                         |
+| ---------------------- | ---------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| **Requirements**       | Requirements can change during development based on feedback.          | Requirements are generally finalized at the beginning.                  |
+| **Feedback Cycle**     | Feedback is received frequently after every sprint.                    | Feedback usually comes after a major phase or near the end.             |
+| **Tester Involvement** | Testers are involved throughout the sprint along with developers.      | Testers usually become more involved after development is completed.    |
+| **Documentation**      | Documentation is maintained but the focus is more on working software. | Detailed documentation is prepared at each stage.                       |
+| **Flexibility**        | Highly flexible; changes can be included in future sprints.            | Less flexible because changes after a phase is completed can be costly. |
+
+**In short:** Agile supports **continuous testing and feedback**, while Waterfall generally follows a **planned sequence of development and testing phases**.
+
+---
+
+# 2. Agile vs Waterfall Testing – Zomato Example
+
+Suppose I am testing a **Zomato food-ordering application**.
+
+If the team uses the **Waterfall model**, requirements would be decided first, development would happen afterward, and testing would mainly happen once the development phase is completed.
+
+With **Agile**, testing would happen continuously during each sprint.
+
+### Three major differences:
+
+**1. Test case design**
+
+* **Waterfall:** Test cases would mostly be designed after the requirements and development phases are completed.
+* **Agile:** Testers can start preparing test cases as soon as the user story is discussed.
+
+**Example:** For a new “Apply Coupon” feature, the tester can prepare positive and negative test cases during the same sprint in which the feature is being developed.
+
+**2. Test execution**
+
+* **Waterfall:** Most testing is performed after the complete feature or application is developed.
+* **Agile:** Testers execute tests continuously as developers complete individual stories.
+
+**Example:** If the restaurant search feature is completed in Sprint 1, it can be tested immediately instead of waiting for the whole application to finish.
+
+**3. Bug reporting and fixing**
+
+* **Waterfall:** Bugs may be reported mainly during the testing phase and fixed afterward.
+* **Agile:** Bugs are reported and discussed quickly, and developers can fix them within the same sprint when possible.
+
+**Example:** If the cart shows the wrong total, the tester reports it immediately and the developer can fix and retest it before the sprint ends.
+
+**Conclusion:**
+Agile makes testing more continuous and collaborative, while Waterfall generally keeps testing as a later, separate phase.
+
+---
+
+# 3. Simple SCRUM Workflow Diagram
+
+```text
+                 PRODUCT OWNER
+                      │
+                      │ Product Backlog
+                      ▼
+              ┌─────────────────┐
+              │ Sprint Planning │
+              └────────┬────────┘
+                       │
+                       ▼
+              ┌─────────────────┐
+              │      SPRINT     │
+              │                 │
+              │ Development     │
+              │ Testing         │
+              │ Bug Fixing      │
+              └────────┬────────┘
+                       │
+          ┌────────────┴────────────┐
+          │                         │
+          ▼                         ▼
+   DAILY STANDUP              SCRUM MASTER
+          │                  (Facilitates Scrum)
+          │
+          ▼
+    Development Team
+    + Tester
+          │
+          ▼
+   ┌─────────────────┐
+   │  Sprint Review  │
+   └────────┬────────┘
+            │
+            ▼
+      Product Owner
+       + Stakeholders
+            │
+            ▼
+      Feedback / Changes
+            │
+            ▼
+       Product Backlog
+            │
+            └──────► Next Sprint
+```
+
+### Main Roles
+
+* **Product Owner:** Manages requirements and prioritizes the product backlog.
+* **Scrum Master:** Helps the team follow Scrum and removes obstacles.
+* **Development Team:** Develops the features.
+* **Tester:** Designs and executes tests, reports bugs, and verifies fixes.
+
+---
+
+# 4. Agile Sprint Testing Activities – Swiggy Example
+
+| Sprint Phase                      | Testing Activities for Swiggy                                                                                                        |
+| --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
+| **Backlog Grooming / Refinement** | Understand user stories, identify acceptance criteria, find possible testing risks, and clarify requirements with the Product Owner. |
+| **Sprint Planning**               | Estimate testing effort, identify test scenarios, decide what needs to be tested, and plan test data/environment.                    |
+| **Development**                   | Prepare test cases while development is happening, perform functional testing on completed features, and report defects.             |
+| **Continuous Testing**            | Execute positive and negative test cases, perform API/integration testing where required, and retest fixed bugs.                     |
+| **Bug Fixing**                    | Verify fixed defects and perform regression testing on related functionality.                                                        |
+| **Sprint Review**                 | Demonstrate the completed feature, verify acceptance criteria, and collect feedback from stakeholders.                               |
+| **Sprint Retrospective**          | Discuss what went well, what problems occurred during testing, and how the testing process can be improved in the next sprint.       |
+
+### Example
+
+For a Swiggy **“Apply Coupon”** user story:
+
+**Backlog →** Understand coupon requirements
+↓
+**Sprint Planning →** Prepare testing approach
+↓
+**Development →** Developer builds coupon feature
+↓
+**Testing →** Test valid, expired, and invalid coupons
+↓
+**Bug Reporting →** Report incorrect discount calculation
+↓
+**Bug Fix →** Developer fixes the issue
+↓
+**Retesting + Regression →** Verify the fix and check related cart functionality
+↓
+**Sprint Review →** Demonstrate the working feature
+
+**Conclusion:**
+In Agile, testing is not kept until the end. The tester works alongside the development team throughout the sprint, which helps find and fix problems earlier.
