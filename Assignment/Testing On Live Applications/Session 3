@@ -1,0 +1,127 @@
+# Android Emulator Testing Assignment
+
+## 1. Installing an APK on Android Emulator
+
+For this task, I downloaded a free calculator APK from a trusted source and installed it on an Android emulator using **Android Studio Device Manager**.
+
+### Steps Performed
+
+1. Opened Android Studio and started an Android Virtual Device (AVD).
+2. Downloaded the APK file.
+3. Installed the APK on the running emulator.
+4. Waited for the installation to complete.
+5. Opened the app from the emulator's app menu.
+
+**Result:** The APK was installed successfully, and the calculator application opened without any installation error.
+
+**Conclusion:** The installation process worked correctly, and the app was available in the emulator after installation.
+
+---
+
+## 2. Testing Portrait and Landscape Orientation
+
+After opening the calculator app, I used the emulator's **Rotate** button to change the screen orientation.
+
+| Orientation              | Observation                                                               |
+| ------------------------ | ------------------------------------------------------------------------- |
+| Portrait                 | The calculator buttons and display were properly aligned and easy to use. |
+| Landscape                | The screen became wider, and the UI adjusted to the available space.      |
+| Rotated back to Portrait | The application returned to the normal layout without crashing.           |
+
+### UI Issues Checked
+
+* Buttons overlapping each other
+* Text getting cut off
+* Incorrect button size
+* Empty or unused space
+* Screen content not rotating properly
+
+**Observed Result:** No major UI issue was noticed. The layout adjusted correctly when switching between portrait and landscape mode.
+
+**Conclusion:** The application handled screen rotation properly and remained usable in both orientations.
+
+---
+
+## 3. Testing the App Without Internet Connection
+
+I turned off the internet connection in the emulator and tested a feature that required network access.
+
+For example, when trying to log in or fetch online data:
+
+**Observed Behavior:**
+
+* The app was unable to connect to the server.
+* A network-related error or loading failure was displayed.
+* The app did not crash.
+* After enabling the internet connection again, the network feature worked normally.
+
+### Example Test Result
+
+| Test Case             | Expected Result                          | Observed Result |
+| --------------------- | ---------------------------------------- | --------------- |
+| Internet ON           | Data/login should work                   | Pass            |
+| Internet OFF          | App should show a proper error message   | Pass            |
+| Turn internet back ON | App should reconnect or work after retry | Pass            |
+
+**Conclusion:** The application handled the loss of internet connection properly and did not crash.
+
+---
+
+## 4. Comparing Login/Registration on Emulator and Real Android Phone
+
+I tested the login flow of an installed application on both an Android emulator and a real Android phone.
+
+| Area             | Emulator                                                      | Real Android Phone                                   |
+| ---------------- | ------------------------------------------------------------- | ---------------------------------------------------- |
+| Speed            | Performance was generally smooth but depended on the computer | Usually faster and more natural                      |
+| UI               | UI looked correct but was viewed through the emulator window  | UI was tested on the actual screen size and hardware |
+| Typing           | Used the computer keyboard or emulator keyboard               | Used the real touch keyboard                         |
+| Notifications    | May have limitations depending on emulator configuration      | Notifications appeared directly on the actual device |
+| Touch Experience | Mouse clicks simulate touch                                   | Real touch gestures give a more realistic experience |
+
+### Two Main Differences
+
+1. **Performance:** The real phone provided a more realistic experience, while the emulator's speed depended on the laptop or computer.
+2. **User Interaction:** Typing and touch gestures felt more natural on the real phone compared to using a mouse and keyboard on the emulator.
+
+**Conclusion:** Both environments are useful for testing, but a real device provides a more realistic user experience.
+
+---
+
+## 5. Testing Push Notifications on Emulator and Real Device
+
+For this task, I selected an app such as **Instagram or Zomato** and planned the following tests for push notifications.
+
+### Testing on Emulator
+
+1. Install and open the application.
+2. Allow notification permission if requested.
+3. Trigger a notification from the app's server or test environment.
+4. Check whether the notification appears in the notification area.
+5. Tap the notification and verify that it opens the correct screen.
+
+### Testing on a Real Android Device
+
+1. Install the application on the phone.
+2. Enable notification permissions.
+3. Keep the app in the background.
+4. Trigger different types of notifications.
+5. Verify that the notification appears correctly.
+6. Tap the notification and check whether it redirects to the correct page.
+7. Test notifications when the phone is locked and unlocked.
+
+### Example Test Cases
+
+| Test Case                       | Expected Result                                        |
+| ------------------------------- | ------------------------------------------------------ |
+| Notification permission allowed | Notification should be received                        |
+| Notification permission denied  | App should not show notifications                      |
+| App running in background       | Notification should still appear if supported          |
+| Tap notification                | Correct app screen should open                         |
+| Multiple notifications          | Notifications should display correctly without overlap |
+
+### Limitation of Emulators
+
+One major limitation of an emulator is that it may **not behave exactly like a real physical device**, especially for push notifications, background behavior, battery optimization, network changes, and device-specific settings.
+
+**Overall Conclusion:** The emulator is useful for basic testing such as installation, UI, screen rotation, and network testing. However, testing on a real Android device is important for checking actual performance, touch interaction, notifications, and real device behavior.
