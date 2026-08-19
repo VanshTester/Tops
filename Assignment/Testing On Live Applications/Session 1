@@ -1,98 +1,26 @@
-## Manual Testing Assignment Answers
+1) I opened the Flipkart Website on my Browser test the main navigation bar
+   Then i clicked on on menu items like Electronics, Fashion, Home, etc to check the Expected Content loads or not and to also check if the URL changes correctely or not.
+   Yes the URL successfully changed and the content also loaded successfully
 
-### 1. Testing the Flipkart Main Navigation Bar
+2) I picked Instagram to test its field validation by entering invalid email addresses, leaving required fields blank, and submitting
+   I Entered invalid email addresse and the message that popped was "The login information you entered is incorrect". 
+   And after that i checked it with leaving Required Field bkank also but the login button was not clickable.
 
-I opened the Flipkart website and tested the main navigation options by clicking on different categories such as **Electronics, Fashion, Home & Furniture, Beauty & Toys**, etc.
+3) I installed Notepad ++ Desktop application on my Windows. 
+   When the downloading completed i runed the installer and the installer runed sucessfully and it created a start menu shortcut on my desktop also.
+   Then i opened the Notepad++ and created a new text file and wrote a programe in it and after that i saved it in my Document folder it saved sucessfully.
 
-| Menu Item        | Test Performed              | Expected Result                                                         | Result |
-| ---------------- | --------------------------- | ----------------------------------------------------------------------- | ------ |
-| Electronics      | Clicked on Electronics      | Electronics-related products/page should open and the URL should update | Pass   |
-| Fashion          | Clicked on Fashion          | Fashion products and categories should load correctly                   | Pass   |
-| Home & Furniture | Clicked on Home & Furniture | Home-related products should be displayed                               | Pass   |
-| Beauty & Toys    | Clicked on Beauty & Toys    | Relevant products should load                                           | Pass   |
-| Grocery          | Clicked on Grocery          | Grocery section should open correctly                                   | Pass   |
+4) I downloaded the Spotify Lite APK from a safe APK source and installed it on an Android emulator. After the installation was completed, I launched the application successfully.
+   The app opened without any major errors, and the login/welcome screen appeared correctly. I verified the main UI elements, including:
+   Spotify Lite logo displayed properly
+   Login fields were visible and readable
+   Buttons were properly displayed and clickable
+   Text and screen layout appeared correctly
+   No overlapping or broken UI elements were observed
+   Result: The Spotify Lite application was installed and launched successfully on the Android emulator, and the login screen UI was displayed properly on the mobile screen.
 
-**Conclusion:** The navigation bar was working properly during testing. The selected category opened the expected content, and the page/URL changed accordingly. Minor differences may occur depending on Flipkart's current website layout or location.
-
----
-
-### 2. Testing Login/Sign-Up Form Validation
-
-I selected a popular web application's login/sign-up form and tested different invalid inputs.
-
-| Test Case             | Input                                       | Expected Result                            | Observed Result                             |
-| --------------------- | ------------------------------------------- | ------------------------------------------ | ------------------------------------------- |
-| Empty required field  | Left the required field blank and submitted | Validation message should appear           | Error message displayed                     |
-| Invalid email         | Entered `abc` or `test@`                    | System should reject the invalid email     | Invalid email/valid input message displayed |
-| Empty password        | Entered email but left password blank       | Password validation should appear          | Error message displayed                     |
-| Invalid mobile number | Entered fewer digits than required          | System should reject the number            | Validation/error message displayed          |
-| Valid details         | Entered valid information                   | Form should proceed to the next step/login | Worked correctly                            |
-
-**Conclusion:** The form validation was working correctly. Invalid or empty fields were not accepted, and the user was asked to provide valid information before continuing.
-
----
-
-### 3. Testing Notepad++ Installation and File Saving
-
-I installed **Notepad++** on a Windows machine and performed the following tests:
-
-| Test Case                | Expected Result                             | Result |
-| ------------------------ | ------------------------------------------- | ------ |
-| Run the installer        | Installation should start without errors    | Pass   |
-| Complete installation    | Notepad++ should install successfully       | Pass   |
-| Check Start Menu         | A Notepad++ shortcut should be created      | Pass   |
-| Open the application     | Notepad++ should launch correctly           | Pass   |
-| Create a text file       | User should be able to enter text           | Pass   |
-| Save in Documents folder | File should save successfully in Documents  | Pass   |
-| Reopen saved file        | Saved content should be displayed correctly | Pass   |
-
-**Conclusion:** The installation was successful. The Start Menu shortcut was created, and I was able to create and save a text file in the Documents folder without any issues.
-
----
-
-### 4. Testing Spotify Lite APK on an Android Emulator
-
-I installed the **Spotify Lite APK** on an Android emulator and tested the application's basic functionality.
-
-| Test Case           | Expected Result                                                  | Result |
-| ------------------- | ---------------------------------------------------------------- | ------ |
-| Install APK         | App should install successfully                                  | Pass   |
-| Launch application  | Spotify Lite should open without crashing                        | Pass   |
-| Check login screen  | Login screen should be displayed                                 | Pass   |
-| Check Spotify logo  | Logo should be visible properly                                  | Pass   |
-| Check input fields  | Email/username and password fields should be displayed correctly | Pass   |
-| Check buttons       | Login and other buttons should be visible and clickable          | Pass   |
-| Check screen layout | UI elements should fit properly on the mobile screen             | Pass   |
-
-**Conclusion:** The application launched successfully on the emulator. The login screen appeared correctly, and the main UI elements such as the logo, input fields, and buttons were properly displayed.
-
----
-
-### 5. Testing Multiple Windows Calculator Instances
-
-I tested the Windows Calculator application by opening multiple instances and switching between them.
-
-| Test Case                               | Expected Result                                      | Result |
-| --------------------------------------- | ---------------------------------------------------- | ------ |
-| Open first Calculator window            | Calculator should open normally                      | Pass   |
-| Open another instance                   | A second Calculator window should open, if supported | Pass   |
-| Perform calculation in Window 1         | Result should appear only in Window 1                | Pass   |
-| Perform another calculation in Window 2 | Window 2 should maintain its own calculation         | Pass   |
-| Switch between windows                  | User should be able to switch normally               | Pass   |
-| Check calculation independence          | One window's calculation should not affect another   | Pass   |
-
-**Example:**
-
-* In Calculator Window 1, I calculated **25 + 15 = 40**.
-* In Calculator Window 2, I calculated **10 × 5 = 50**.
-
-The calculations remained independent, and switching between windows did not affect the results.
-
-**Conclusion:** Multiple Calculator windows worked independently. Calculations performed in one instance did not change or interfere with calculations in another instance.
-
----
-
-## Overall Conclusion
-
-All the tested applications and features worked as expected during the basic manual testing. The navigation, form validation, software installation, mobile app UI, and window handling were checked successfully.
-
+5)  I opened the Windows Calculator app and launched multiple instances/windows. I switched between the different Calculator windows and performed separate calculations in each one.
+   In one window i did calculation like 30-20 the ans was 10.
+   After that i opened another window and did the calculation like 40-10  the ans was 30.
+   Then i opened the previous window and the and was not changed.
+   so it proves that by performing calculations in multiple windows/tabs the other window/tab and does not gets any affect.
