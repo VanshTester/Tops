@@ -1,8 +1,102 @@
-1)After viewing Zomato.com in Chrome DevTools on iPhone 12, iPad, and Desktop, these UI/layout changes can be observed:
+1. Zomato Responsive Testing
+i) iPhone 12
 
-  Navigation and Search Bar:
-  On desktop, the navigation menu and search bar are displayed horizontally with more space. On iPhone 12, the layout becomes compact, and some navigation options may be hidden or rearranged. iPad shows an intermediate tablet-style layout.
-  Content Layout:
-  Desktop displays restaurant cards and other content in multiple columns. On iPhone 12, the content is mostly shown in a single-column vertical layout for easier scrolling. iPad usually displays fewer columns than desktop but more than mobile.
-  Images and Text Size:
-  On mobile, images, buttons, and text are resized to fit the smaller screen, with touch-friendly spacing. On desktop, images are larger and more content can be displayed side by side, while iPad provides a balanced layout between mobile and desktop.
+Dimensions: 390 × 844
+The navigation bar becomes smaller and more compact.
+The content is adjusted to fit the mobile screen.
+Font weight:300
+
+ii) iPad
+
+Dimensions: 820 × 1180
+More menu options are visible horizontally compared to the mobile view.
+The layout has more space than the iPhone view.
+Font weight:300
+
+iii) Desktop
+
+Dimensions: 1280 × 853
+More navigation and menu options are visible horizontally.
+The layout is wider and has more space.
+Font weight: 300
+
+Conclusion: The main changes between mobile, iPad, and desktop are the size of the navigation bar, available screen space, and arrangement of menu options.
+
+
+2. Flipkart Product Page Responsive Testing
+
+The following observations were made while resizing the Flipkart product page:
+
+i) When the screen was resized to mobile width, some menu items appeared to overlap.
+
+ii) No major layout changes were observed during the testing.
+
+iii) The mobile screen width was approximately 440 px, while the desktop width was approximately 853 px.
+
+Conclusion: The page adjusted to different screen sizes, but a minor menu overlapping issue was seen in the mobile view.
+
+3. Myntra Cross-Browser Testing
+
+Myntra.com was opened in both **Google Chrome** and **Mozilla Firefox**.
+
+Observations:
+
+i. No major difference was found in fonts, buttons, or images.
+ii. The homepage layout looked almost the same in both browsers.
+
+Conclusion: Myntra.com displayed properly in both Chrome and Firefox, and no major browser-related rendering issue was found.
+
+
+
+4. BookMyShow Cross-Browser and Device Testing
+
+The following differences were observed while testing BookMyShow on Chrome and Edge using desktop and mobile views:
+
+i) Navigation Menu
+
+On desktop, the navigation menu is displayed horizontally.
+On mobile, the menu becomes smaller and more compact.
+Some options may be hidden inside a menu icon.
+
+ii) Banners
+
+On desktop, promotional banners fit properly on the screen.
+On mobile, banners are resized or slightly cropped to fit the smaller screen.
+Banner text may appear closer to the edges on mobile.
+
+3) Buttons
+
+On desktop, buttons are larger and have more space.
+On mobile, buttons become smaller or may be arranged vertically.
+Minor differences in button spacing and alignment may appear between Chrome and Edge.
+
+Conclusion: No major rendering issue was found. Most of the changes were due to different screen sizes.
+
+
+
+ 5. Spotify Web Responsive Testing
+
+Spotify Web was tested in Chrome using different device sizes.
+
+ Devices Tested
+
+Desktop
+
+Dimensions: 1280 × 853
+
+iPhone 12
+
+Dimensions: 390 × 844
+Some icons appeared small.
+The font size also appeared smaller on the mobile screen.
+
+Samsung Galaxy S20 Ultra
+
+Dimensions: 412 × 915
+The layout adjusted according to the screen size.
+
+ Conclusion
+
+Spotify Web worked properly on all the tested devices. The navigation bar adjusted correctly, and users could scroll, browse songs, and search for music without any major problem.
+
+No major responsive defects were found. Only minor differences, such as smaller icons and fonts on mobile screens, were observed.
