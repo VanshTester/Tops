@@ -47,7 +47,7 @@ Result: The main features worked on both devices, but the real phone provided a 
 
 5. Testing Push Notifications
 
-For an app such as **Instagram or Zomato**, push notifications can be tested using both an emulator and a real Android device.
+For an app such as Instagram or Zomato, push notifications can be tested using both an emulator and a real Android device.
 
 On the Emulator
 
