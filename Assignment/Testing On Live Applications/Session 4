@@ -58,8 +58,7 @@ VALUES (101, 'Pizza Hut', 'Ahmedabad');
 To check whether the user Riya exists in the `users` table, use the following SQL query:
 
 
-SELECT *
-FROM users
+SELECT * FROM users
 WHERE name = 'Riya';
 
 
@@ -73,8 +72,7 @@ If the UI and database are properly synchronized, the query should return Riya's
 After deleting a product from the shopping cart, the following SQL query can be used to check whether the product is still present:
 
 
-SELECT *
-FROM cart_items
+SELECT * FROM cart_items
 WHERE product_id = 101
 AND user_id = 1;
 
