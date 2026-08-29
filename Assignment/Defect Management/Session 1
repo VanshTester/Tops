@@ -1,84 +1,37 @@
-## 1. Mobile App Defects
+1. Mobile App Defects
 
-**App Chosen: Paytm – Login/Signup Form**
+App Chosen: Paytm – Login/Signup Form
 
-1. **OTP is not received even after clicking the “Send OTP” button.**
-2. **The login button remains enabled when the mobile number field is empty.**
-3. **An invalid 5-digit mobile number is accepted without showing an error message.**
-4. **After entering a valid OTP, the app keeps loading and does not redirect the user to the home screen.**
-5. **The “Send OTP” button text overlaps with the button boundary on smaller mobile screens.**
+Defect 1. OTP is not received even after clicking the “Send OTP” button.
+Defect 2. The login button remains enabled when the mobile number field is empty.
+Defect 3. An invalid 5-digit mobile number is accepted without showing an error message.
+Defect 4. After entering a valid OTP, the app keeps loading and does not redirect the user to the home screen.
+Defect 5. The “Send OTP” button text overlaps with the button boundary on smaller mobile screens.
 
----
 
-## 2. Severity and Priority
+ 2. Severity and Priority
 
-| Defect                                                     | Severity     | Priority   |
-| ---------------------------------------------------------- | ------------ | ---------- |
-| OTP is not received after clicking “Send OTP”              | **Critical** | **High**   |
-| Login button enabled with an empty mobile number           | **Major**    | **Medium** |
-| Invalid 5-digit mobile number accepted                     | **Major**    | **High**   |
-| Valid OTP entered but app does not redirect to home screen | **Blocker**  | **High**   |
-| “Send OTP” button text overlaps on small screens           | **Minor**    | **Low**    |
+ Defect                                                       Severity     Priority   
+                                                                             
+ OTP is not received after clicking “Send OTP”                Critical     High      
+ Login button enabled with an empty mobile number             Major        Medium 
+ Invalid 5-digit mobile number accepted                       Major        High   
+ Valid OTP entered but app does not redirect to home screen   Blocker      High   
+ “Send OTP” button text overlaps on small screens             Minor        Low    
 
-### Justification where Severity and Priority are different
+Justification where Severity and Priority are different
 
-**Defect: Login button is enabled when the mobile number field is empty.**
+Defect: Login button is enabled when the mobile number field is empty.
 
-* **Severity: Major** because it affects the login validation and can confuse users.
-* **Priority: Medium** because users may still be able to enter a valid mobile number and log in successfully. Therefore, it is important to fix, but it is less urgent than defects that completely block login.
+Severity: Major because it affects the login validation and can confuse users.
+Priority: Medium because users may still be able to enter a valid mobile number and log in successfully. Therefore, it is important to fix, but it is less urgent than defects that completely block login.
 
----
 
-## 3. Bug Life Cycle Diagram
 
-```text
-                         +----------------+
-                         |      NEW       |
-                         +----------------+
-                                  |
-                                  v
-                         +----------------+
-                         |    ASSIGNED    |
-                         +----------------+
-                                  |
-                                  v
-                         +----------------+
-                         |      OPEN      |
-                         +----------------+
-                          /   |    |    \
-                         /    |    |     \
-                        v     v    v      v
-                  +--------+ +------+ +----------+ +-------------+
-                  |REJECTED| |FIXED | | DEFERRED | |  DUPLICATE  |
-                  +--------+ +------+ +----------+ +-------------+
-                       |        |
-                       |        v
-                       |   +----------+
-                       |   |  RETEST  |
-                       |   +----------+
-                       |      |    |
-                       |      |    +----------------+
-                       |      |                     |
-                       |      v                     v
-                       | +----------+         +----------+
-                       | | VERIFIED |         |   OPEN   |
-                       | +----------+         +----------+
-                       |      |
-                       |      v
-                       | +----------+
-                       +>|  CLOSED  |
-                         +----------+
-
-        OPEN / NEW  --------->  NOT A BUG
-```
-
-**Main flow:**
-**New → Assigned → Open → Fixed → Retest → Verified → Closed**
-
-Other possible states from **Open** include: **Rejected, Deferred, Duplicate, or Not a Bug**. If the defect still exists during **Retest**, it is sent back to **Open**.
-
----
-
-## 4. Late Defect in a UPI Payment Feature
-
-Suppose a defect is discovered after the Paytm app is live where a user's bank account is debited, but the payment status incorrectly shows **“Failed.”** The user may try to make the payment again, causing confusion and possible duplicate payments. Fixing this issue after release would require emergency development, testing, customer support, and possibly handling user complaints or refunds. If the defect had been found during development, it could have been fixed before release with much less cost and impact. Early detection would also protect user trust and avoid problems for many live users.
+4. Scenario: UPI Payment Defect
+            
+   After a UPI payment feature was released, users reported that payments were sometimes deducted from their bank account but the app showed the transaction as failed.
+   Since the defect was found after release, the company had to investigate user complaints, fix the issue, and handle payment reconciliation.
+   This caused financial confusion, customer complaints, and loss of trust in the app.
+   If the defect had been found during development, developers could have fixed and tested it before release at a much lower cost.
+   Early detection would have prevented user impact and reduced the time and resources needed for the fix.
