@@ -1,129 +1,103 @@
-## 1. Bugzilla Account Creation and Login
+1. Bugzilla Account Creation and Login
 
-I created a Bugzilla account using my personal/college email and logged in successfully. After login, the Bugzilla dashboard was displayed, showing options such as **New Bug, Search, Reports, and My Bugs**.
+   I created a Bugzilla account using my personal/college email and logged in successfully. After login, the Bugzilla dashboard was displayed, showing options such as New Bug, Search, Reports, and My Bugs.
 
-**Result:** Account created and login successful.
-**Screenshot:** Attach your screenshot of the Bugzilla dashboard here.
+Result: Account created and login successful.
+Screenshot: Attach your screenshot of the Bugzilla dashboard here.
 
----
 
-## 2. Defect Logged in Bugzilla
+2. Defect Logged in Bugzilla
 
-**Application:** Instagram
-**Module:** Login
-**Build/Version:** Latest Version
+  Application: Instagram
+  Module: Login
+  Build/Version: Latest Version
 
-**Bug Summary:** Login button remains disabled after entering valid login details.
+  Bug Summary: Login button remains disabled after entering valid login details.
 
-**Steps to Reproduce:**
+  Steps to Reproduce:
 
 1. Open the Instagram application.
 2. Enter a valid username/email and password.
 3. Observe the Login button.
 
-**Expected Result:**
-The Login button should become active and allow the user to log in.
+  Expected Result: The Login button should become active and allow the user to log in.
 
-**Actual Result:**
-The Login button remains disabled even after entering valid login details.
+  Actual Result: The Login button remains disabled even after entering valid login details.
 
-**Severity:** Major
-**Priority:** High
+  Severity: Major
+  Priority: High
 
-**Attachment:** Screenshot/mock image of the issue attached.
+  Attachment: Screenshot/mock image of the issue attached.
 
-**Result:** The defect was successfully logged in Bugzilla.
+  Result: The defect was successfully logged in Bugzilla.
 
----
 
-## 3. Two More Defects Logged
+3. Two Defects to Log in Bugzilla
 
-### Defect 2 – PhonePe
+   Defect 1 – PhonePe UPI Payment
+    
+   Summary: UPI payment fails even though the bank account has sufficient balance.
+   Application: PhonePe
+   Module: UPI Payment
+   Severity:Critical
+   Priority:High
+   Build/Version: 12.8.0
+   Steps to Reproduce:
+    
+   i. Open PhonePe.
+   ii. Select any UPI payment option.
+   iii. Enter a valid UPI ID and amount.
+   iv. Confirm the payment using UPI PIN.
+   Expected Result: Payment should be completed successfully and a confirmation should be displayed.
+   Actual Result: Payment fails after confirmation even though sufficient balance is available.
 
-**Application:** PhonePe
-**Module:** UPI Payment
-**Build/Version:** Version 1.0
+ Defect 2 – Flipkart Wrong Item Added to Cart
 
-**Bug Summary:** Payment amount is deducted, but the transaction is displayed as failed.
+   Summary: Selecting one product adds a different product to the shopping cart.
+   Application: Flipkart
+   Module: Shopping Cart
+   Severity: Major
+   Priority: High
+   Build/Version:10.32.2
+   Steps to Reproduce:
 
-**Steps to Reproduce:**
+  i. Open Flipkart.
+  ii. Search for a product.
+  iii. Select a specific product and click Add to Cart.
+  iv. Open the shopping cart.
+  Expected Result: The selected product should be displayed in the cart.
+  Actual Result: A different product is displayed in the cart.
 
-1. Open PhonePe.
-2. Select a contact or merchant.
-3. Enter the payment amount.
-4. Complete the UPI payment.
-5. Check the transaction status.
 
-**Expected Result:**
-After successful deduction, the transaction should show **Successful**.
+4. Defect Status Update
 
-**Actual Result:**
-The amount is deducted from the account, but the app shows the transaction as **Failed**.
+I have selected the Instagram Login defect and updated its status through the Bug Life Cycle.
 
-**Severity:** Critical
-**Priority:** High
+  Status         Comment Added                                                                   
+                    
+    New          Defect logged successfully and waiting for review.                              
+    Assigned     The defect has been assigned to the developer for investigation.                
+    Fixed        The developer fixed the issue causing the Login button to remain disabled.      
+    Retest       The tester retested the login functionality after the fix was deployed.         
+    Closed       The issue was verified successfully, and the Login button is working correctly. 
 
----
+  Final Status: Closed
 
-### Defect 3 – Flipkart
 
-**Application:** Flipkart
-**Module:** Shopping Cart
-**Build/Version:** Version 1.0
 
-**Bug Summary:** Wrong item is added to the cart after selecting a product.
+5. Search for All Non-Closed Defects
 
-**Steps to Reproduce:**
+I used the Bugzilla Search feature and applied the following filters:
 
-1. Open the Flipkart app.
-2. Search for a product.
-3. Select a specific product.
-4. Click **Add to Cart**.
-5. Open the shopping cart.
-
-**Expected Result:**
-The selected product should be added to the cart.
-
-**Actual Result:**
-A different product is added to the cart.
-
-**Severity:** Major
-**Priority:** High
-
-**Result:** Both defects were successfully logged with appropriate Severity, Priority, Module, and Build/Version details.
-
----
-
-## 4. Defect Status Update
-
-I selected the **Instagram Login defect** and updated its status through the Bug Life Cycle.
-
-| Status       | Comment Added                                                                   |
-| ------------ | ------------------------------------------------------------------------------- |
-| **New**      | Defect logged successfully and waiting for review.                              |
-| **Assigned** | The defect has been assigned to the developer for investigation.                |
-| **Fixed**    | The developer fixed the issue causing the Login button to remain disabled.      |
-| **Retest**   | The tester retested the login functionality after the fix was deployed.         |
-| **Closed**   | The issue was verified successfully, and the Login button is working correctly. |
-
-**Final Status:** **Closed**
-
----
-
-## 5. Search for All Non-Closed Defects
-
-I used the Bugzilla **Search** feature and applied the following filters:
-
-* **Reporter/User ID:** My Bugzilla user ID
-* **Status:** Selected all statuses except **Closed**
+Reporter/User ID: My Bugzilla user ID
+Status: Selected all statuses except Closed
 
 The filtered search displayed all the defects I had logged that were still open or not closed, such as:
 
-| Bug ID | Application | Summary                                  | Status |
-| ------ | ----------- | ---------------------------------------- | ------ |
-| 102    | PhonePe     | Amount deducted but payment shows failed | New    |
-| 103    | Flipkart    | Wrong item added to cart                 | New    |
+  Bug ID   Application   Summary                                    Status  
+  
+  102      PhonePe       Amount deducted but payment shows failed   New     
+  103      Flipkart      Wrong item added to cart                   New     
 
-**Result:** The search successfully displayed all defects that were **not Closed**.
+Result: The search successfully displayed all defects that were not Closed.
 
-**Screenshot:** Attach your screenshot of the filtered Bugzilla search results here.
