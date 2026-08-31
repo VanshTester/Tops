@@ -1,1 +1,486 @@
+                                                        SECTION-A:-  Concept Application
+1] SCENARIO 1
 
+
+In the Agile model, testing should start **from the beginning of the sprint** rather than waiting until development is fully completed. During sprint planning, QA testers review the user stories and requirements, understand the acceptance criteria, and start preparing test scenarios. Throughout the two-week sprint, developers and testers work together. For example, for a **“Place Food Order”** feature, QA can prepare test cases while the developers are developing the feature and begin testing once a testable build is provided.
+
+Entry Criteria – 2 Examples
+
+1) User story and requirements are clearly defined:
+The user story should contain clear requirements and acceptance criteria so that the QA team understands what functionality needs to be tested.
+
+2) Testable build is available:
+The feature should be developed, integrated, and deployed to the testing environment so that testers can start executing their tests.
+
+Exit Criteria – 2 Examples
+
+1) Testing activities are completed:
+All important test cases planned for the sprint should be executed, and critical or high-priority defects should be fixed or formally accepted by the team.
+
+2) Acceptance criteria are fulfilled:
+The feature should satisfy all defined acceptance criteria and should not have any critical issues that could affect its release or use.
+
+ Agile Testing vs Waterfall Testing
+
+The major difference between Agile and Waterfall testing is the timing and continuity of testing. In Agile, testing is performed continuously throughout each sprint. Testers work closely with developers and the product owner, allowing defects to be identified and corrected quickly. Agile also allows requirements to change based on customer or product feedback.
+
+In the Waterfall model, testing normally begins after the development phase is completed. The different phases are carried out sequentially, so testers usually receive the application at a later stage. If serious defects or requirement issues are discovered during testing, correcting them can require more time, effort, and cost.
+
+Therefore, Agile follows a continuous and collaborative testing approach, while Waterfall follows a more sequential testing approach.
+
+
+
+2] SCENARIO 2
+
+As a QA Lead, I would make sure that the payment gateway is tested for both functional and non-functional requirements. Since the application needs to support around 5,000 concurrent transactions during peak lunch hours, non-functional testing is very important.
+
+1. Performance Testing
+
+Performance testing should be performed to check whether the payment gateway can process 5,000 transactions at the same time without excessive delay, errors, or system crashes. This helps ensure that users can complete payments smoothly during peak traffic.
+
+2. Security Testing
+
+Security testing is essential because the payment gateway handles sensitive information such as card details, UPI information, and transaction data. It helps identify vulnerabilities and ensures that unauthorized users cannot access or misuse payment information.
+
+3. Reliability and Recovery Testing
+
+This testing verifies how the payment system behaves when problems occur, such as a network failure, gateway timeout, or server failure. It should ensure that users are not charged twice, transactions are not incorrectly recorded, and failed payments can be handled or recovered properly.
+
+7 Key Principle – Absence-of-Errors Fallacy
+
+The Absence-of-Errors Fallacy states that even if a software product has very few or no known defects, it does not necessarily mean that the software is useful or meets the user's requirements.
+
+In a payment gateway, it is impossible to test every possible combination of transactions because there can be many combinations of banks, cards, UPI methods, transaction amounts, devices, networks, users, and timings.
+
+Therefore, instead of trying to test every combination, the QA team should select important and high-risk scenarios using techniques such as risk-based testing, equivalence partitioning, boundary value analysis, and representative test data. This provides effective test coverage while keeping testing practical.
+
+
+3] SCENARIO 3
+
+As a QA tester, I would apply both Equivalence Partitioning (EP) and Boundary Value Analysis (BVA) to test the Apply Promo Code field. Since there is limited testing time, these techniques can help achieve good test coverage with fewer test cases.
+
+1. Equivalence Partitioning
+
+The promo code should contain only alphabets and numbers, and its length must be between 6 and 10 characters.
+
+Valid Partition:
+
+6–10 alphanumeric characters → Valid
+
+Examples: ABC123, FOOD1234
+
+Invalid Partitions:
+
+Less than 6 characters → Invalid
+Example: ABC12 (5 characters)
+
+More than 10 characters → Invalid
+Example: FOOD1234567 (11 characters)
+
+Special characters included → Invalid
+Example: FOOD@123
+
+Spaces included → Invalid
+Example: FOOD 123
+
+Empty value → Invalid
+Example: Leaving the promo code field blank
+
+Instead of checking a large number of promo codes, I can select one suitable test value from each partition to represent that group.
+
+2. Boundary Value Analysis
+
+For the allowed range of 6–10 characters, I would test the values just below, at, and just above the boundaries.
+
+5 characters → Invalid
+6 characters → Valid
+7 characters → Valid
+9 characters → Valid
+10 characters → Valid
+11 characters → Invalid
+
+Examples:
+
+ABCDE → 5 characters → Invalid
+
+ABC123 → 6 characters → Valid
+
+ABC1234 → 7 characters → Valid
+
+ABC123456 → 9 characters → Valid
+
+ABC1234567 → 10 characters → Valid
+
+ABC12345678 → 11 characters → Invalid
+
+3. Which Technique Gives Better Coverage?
+
+For this particular scenario, BVA provides better coverage because the main validation rule is based on a specific character-length range of 6 to 10 characters.
+
+BVA helps identify errors near the limits, such as the system accepting a 5-character code or rejecting a valid 10-character code.
+
+However, EP is also important because it helps test other invalid conditions, such as special characters, spaces, and blank input.
+
+Conclusion:
+
+I would use BVA as the main technique because the promo code has clearly defined length boundaries. I would combine it with EP to cover different categories of valid and invalid inputs. Together, these techniques provide effective defect coverage while reducing the total number of test cases required.
+
+
+4.] SCENARIO 4
+
+
+As a QA Lead, I would give different importance to these two defects because their impact on the application is very different. Defect A affects the main ordering functionality, whereas Defect B is only related to the user interface.
+
+Defect A: App crashes when tapping “Place Order”
+
+1. Severity: Blocker
+2. Priority: High
+
+Reason: The application crashes when the user tries to complete an order. This prevents users from placing orders successfully, which is a critical business function. Since the problem affects around 30% of users, it creates a serious risk for the release and should be fixed immediately.
+
+Defect B: Restaurant logo is slightly misaligned on iPhone SE
+
+1. Severity: Minor
+2. Priority: Low
+
+Reason: This defect only affects the visual appearance of the restaurant listing. Users can still search for restaurants, select food items, and place orders without any major difficulty. Since it occurs only on one device model, it can be given a lower priority and fixed in a future update if required.
+
+Severity vs Priority
+
+Severity describes how seriously a defect affects the functionality or performance of the application.
+
+Priority indicates how urgently the development team needs to fix the defect.
+
+In this case, Defect A has Blocker severity and High priority because the crash stops users from completing the main purpose of the application. Defect B has Minor severity and Low priority because it is a small UI issue that does not affect the core functionality.
+
+Which Defect Should Be Fixed First?
+
+Defect A should be fixed first. Since the release is scheduled for the next day, allowing the application to crash during order placement could lead to unsuccessful orders, loss of business, and a negative user experience.
+
+The logo alignment problem is much less serious because users can continue using the application normally.
+
+Final Decision:
+
+The team should immediately fix Defect A, perform retesting on the affected devices, and run the required regression tests. After confirming that the crash is resolved, the team can work on Defect B if sufficient time is available.
+
+
+                                                   SECTION B – Practical Testing Tasks
+
+
+1] TASK 1
+
+
+1. Test Objectives
+
+1) Requirement Analysis: Make sure that all login requirements are clearly understood, documented, and testable.
+
+2) Test Planning: Prepare test cases that cover both successful and unsuccessful login scenarios.
+
+3) Test Execution: Execute at least 95% of the planned test cases for the login module.
+
+4) Test Closure: Confirm that all Critical and High-severity defects are resolved or officially accepted before the application is released.
+
+2. In-Scope
+
+ Login using valid and invalid email/mobile numbers and passwords.
+ Checking appropriate error messages for incorrect login details.
+ Testing the Forgot Password functionality.
+ Verifying login functionality on Chrome, Edge, and mobile browsers.
+
+3. Out-of-Scope
+
+ Restaurant browsing and food search.
+ Cart and food order placement.
+ Payment gateway functionality.
+ Administrator login.
+
+4. Entry Criteria
+
+ Login requirements have been completed, reviewed, and approved.
+ The test environment and required test accounts are ready for testing.
+
+5. Exit Criteria
+
+ The planned login test cases have been executed with the required level of coverage.
+ No Critical or High-severity defects are left unresolved.
+
+6. Risks and Mitigation
+
+1) Server Downtime: Maintain a backup or alternative testing environment so testing can continue if the main server is unavailable.
+
+2) OTP Not Received: Use dedicated test accounts or a suitable test/mocked OTP service for verification.
+
+3) Security Issues: Perform security checks for password handling, session management, and repeated unauthorized login attempts.
+
+
+
+2] TASK 2
+
+
+For the food delivery application's Delivery Address Form, Equivalence Partitioning (EP) and Boundary Value Analysis (BVA) can be applied to test the Pincode and Phone Number fields efficiently.
+
+Equivalence Partitions
+
+Pincode – 6-digit numeric value only
+
+Valid Partition:
+
+Exactly 6 numeric digits, for example: 400001.
+
+Invalid Partitions:
+
+Fewer than 6 digits.
+More than 6 digits.
+Alphabetic characters.
+Special characters.
+Spaces.
+Blank or empty value.
+
+Phone Number – 10-digit numeric value only
+
+Valid Partition:
+
+Exactly 10 numeric digits, for example: 9876543210.
+
+Invalid Partitions:
+
+Fewer than 10 digits.
+More than 10 digits.
+Alphabetic characters.
+Special characters.
+Spaces.
+Blank or empty value.
+
+Boundary Values
+
+Pincode:
+
+5 digits → Invalid
+6 digits → Valid
+7 digits → Invalid
+
+Phone Number:
+
+9 digits → Invalid
+10 digits → Valid
+11 digits → Invalid
+
+Tagged Test Cases – Delivery Address Form
+
+TC01 – Valid Pincode
+
+Technique: EP
+Type: Positive
+Input: 400001
+Expected Result: The system should accept the pincode.
+Pass/Fail: Pass
+
+TC02 – Pincode below allowed length
+
+Technique: BVA
+Type: Negative
+Input: 40000 (5 digits)
+Expected Result: An appropriate validation error should be displayed.
+Pass/Fail: Pass
+
+TC03 – Pincode at allowed length
+
+Technique: BVA
+Type: Positive
+Input: 400000 (6 digits)
+Expected Result: The system should accept the pincode.
+Pass/Fail: Pass
+
+TC04 – Pincode above allowed length
+
+Technique: BVA
+Type: Negative
+Input: 4000000 (7 digits)
+Expected Result: An appropriate validation error should be displayed.
+Pass/Fail: Pass
+
+TC05 – Pincode containing alphabets
+
+Technique: EP
+Type: Negative
+Input: 4000AB
+Expected Result: The system should reject the input and display an error message.
+Pass/Fail: Pass
+
+TC06 – Pincode containing a special character
+
+Technique: EP
+Type: Negative
+Input: 400@01
+Expected Result: The system should reject the input and display an error message.
+Pass/Fail: Pass
+
+TC07 – Valid Phone Number
+
+Technique: EP
+Type: Positive
+Input: 9876543210
+Expected Result: The phone number should be accepted.
+Pass/Fail: Pass
+
+TC08 – Phone number below allowed length
+
+Technique: BVA
+Type: Negative
+Input: 987654321 (9 digits)
+Expected Result: An appropriate validation error should be displayed.
+Pass/Fail: Pass
+
+TC09 – Phone number at allowed length
+
+Technique: BVA
+Type: Positive
+Input: 9876543210 (10 digits)
+Expected Result: The phone number should be accepted.
+Pass/Fail: Pass
+
+TC10 – Phone number above allowed length
+
+Technique: BVA
+Type: Negative
+Input: 98765432101 (11 digits)
+Expected Result: An appropriate validation error should be displayed.
+Pass/Fail: Pass
+
+TC11 – Phone number containing alphabets
+
+Technique: EP
+Type: Negative
+Input: 98765ABCDE
+Expected Result: The system should reject the input and display an error message.
+Pass/Fail: Pass
+
+TC12 – Phone number containing a special character
+
+Technique: EP
+Type: Negative
+Input: 98765@3210
+Expected Result: The system should reject the input and display an error message.
+Pass/Fail: Pass
+
+3] TASK 3
+
+Test Scenarios
+
+REQ-01 – Add Item to Cart
+
+TS-01: Check whether a user is able to add a food item to the shopping cart successfully.
+
+TS-02: Verify that changing the quantity of a selected item correctly updates the cart.
+
+REQ-02 – Apply Coupon
+
+TS-03: Verify that a valid coupon is accepted and the applicable discount is calculated correctly.
+
+TS-04: Check that an invalid or expired coupon is rejected and a suitable error message is displayed.
+
+REQ-03 – Select Payment Method
+
+TS-05: Verify that the user can choose UPI as the preferred payment option.
+
+TS-06: Verify that the user can select other available payment options, such as Card or Cash on Delivery.
+
+REQ-04 – Place Order
+
+TS-07: Verify that the order is placed successfully when the payment is completed successfully.
+
+TS-08: Verify that the order is not created when the payment transaction fails.
+
+REQ-05 – Order Confirmation
+
+TS-09: Verify that the order confirmation page is displayed after a successful order.
+
+TS-10: Verify that the confirmation page shows accurate information such as order ID, ordered items, total amount, and delivery information.
+
+REQ-06 – Order History
+
+TS-11: Verify that a successfully placed order is added to the user's Order History.
+
+TS-12: Verify that opening an order from Order History displays the correct order information.
+
+Defect Severity
+
+1. S1 – Critical: DEF-03 is classified as S1 because the payment method is preventing the user from continuing with the order, which directly blocks order completion.
+
+2. S2 – Major: DEF-01 is classified as S2 because an incorrect cart total can cause the customer to see or potentially pay an incorrect amount.
+
+3. S3 – Minor: DEF-02 is classified as S3 because the coupon can still be used, but there is a small issue with the displayed or calculated discount.
+
+Conclusion:
+
+This RTM provides traceability between the requirements and their corresponding test scenarios. It also helps the QA team identify which requirements are affected by reported defects and ensures that important functionality is properly covered by testing.
+
+
+4.] TASK 4
+
+
+1. Web UI Test Checks
+
+Form Validation: Check that mandatory fields such as delivery address, mobile number, and payment information cannot be submitted empty. Proper validation messages should be shown when required data is missing.
+
+Navigation Links: Verify that options like Back to Cart, Edit Address, Apply Coupon, and Terms & Conditions take the user to the correct page or section.
+
+Data Submission: Enter valid checkout details and select Place Order. Verify that the information is submitted successfully and the user is taken to the order confirmation page.
+
+UI Element Rendering: Check that all important elements, including food items, order summary, prices, coupon section, payment methods, buttons, and final amount, are visible and properly aligned without overlapping or missing components.
+
+Error Message Handling: Enter incorrect or incomplete information or simulate a payment failure. Verify that a clear error message is displayed and the information already entered by the user is not unnecessarily lost.
+
+2. Cross-Browser Test Scenarios
+
+Scenario 1 – Checkout Form and UI
+
+Open the Checkout page using Chrome, Firefox, and Edge. Check the input fields, buttons, order information, and payment options.
+
+Expected Result: The checkout page should provide the same functionality and should be properly displayed in all three browsers.
+
+Expected Difference: Small differences in font appearance, spacing, or rendering may occur between browsers, but there should not be any major UI or functional problems.
+
+Scenario 2 – Coupon and Order Total
+
+Apply a valid coupon separately in Chrome, Firefox, and Edge and verify the discount and final payable amount.
+
+Expected Result: The coupon should work correctly and the final order amount should be the same across all three browsers.
+
+Expected Difference: There may be slight visual differences in the coupon field or button, but the discount calculation and final amount must remain consistent.
+
+Scenario 3 – Place Order and Error Handling
+
+Try to place an order using incomplete or invalid checkout information in each of the three browsers.
+
+Expected Result: The application should display the appropriate validation message and should prevent the order from being submitted.
+
+Expected Difference: The styling of alerts, fonts, or browser-level elements may vary slightly, but the application's functionality should remain consistent.
+
+3. SQL Queries for Backend Verification
+
+Assumption: The database has an orders table containing fields such as order_id, order_total, coupon_code, and payment_method.
+
+1. Query 1 – Verify Order Total
+
+SELECT order_id, order_total
+FROM orders
+WHERE order_id = 1001;
+
+Expected Result: The order_total stored in the database should be the same as the amount shown on the Checkout page.
+
+2. Query 2 – Verify Applied Coupon
+
+SELECT order_id, coupon_code
+FROM orders
+WHERE order_id = 1001;
+
+Expected Result: The coupon_code stored in the database should match the coupon applied during checkout.
+
+3. Query 3 – Verify Payment Method
+
+SELECT order_id, payment_method
+FROM orders
+WHERE order_id = 1001;
+
+Expected Result: The payment_method stored in the database should match the payment option selected by the user on the Checkout page.
