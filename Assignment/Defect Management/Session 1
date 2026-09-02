@@ -16,7 +16,7 @@ Defect 5. The “Send OTP” button text overlaps with the button boundary on sm
  OTP is not received after clicking “Send OTP”                Critical     High      
  Login button enabled with an empty mobile number             Major        Medium 
  Invalid 5-digit mobile number accepted                       Major        High   
- Valid OTP entered but app does not redirect to home screen   Blocker      High   
+ Valid OTP entered but app does not redirect to home screen   High         High   
  “Send OTP” button text overlaps on small screens             Minor        Low    
 
 Justification where Severity and Priority are different
